@@ -718,5 +718,33 @@
     "apple": "https://maps.apple.com/?q=He+Dong+Residence+Shanghai",
     "amap": "https://uri.amap.com/search?keyword=何东旧居&city=上海",
     "dianping": ""
+  },
+  {
+    "id": 1776208983271,
+    "city": "shanghai",
+    "cat": "eat",
+    "emoji": "🍜",
+    "image_url": "",
+    "tall": false,
+    "name_en": "San",
+    "name_zh": "叁店黑金卤肉饭",
+    "sub_en": "",
+    "sub_zh": "",
+    "addr_en": "",
+    "addr_zh": "",
+    "sky": true,
+    "score": 4.7,
+    "desc_en": "",
+    "desc_zh": "",
+    "desc_en_edited": false,
+    "desc_zh_edited": false,
+    "tags_en": [],
+    "tags_zh": [],
+    "yelp": "",
+    "google_page": "",
+    "gmaps": "",
+    "apple": "",
+    "amap": "",
+    "dianping": ""
   }
 ]
