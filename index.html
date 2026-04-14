@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Sky's Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#F5F4F0;min-height:100vh}
+.app{max-width:390px;margin:0 auto;background:#F5F4F0;min-height:100vh;position:relative}
+
+.topbar{background:#fff;padding:16px 20px 0;border-bottom:0.5px solid rgba(0,0,0,0.08);position:sticky;top:0;z-index:40}
+.topbar-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.logo{font-size:20px;font-weight:500;letter-spacing:-0.5px;color:#1a1a1a}
+.logo em{color:#D4537E;font-style:normal}
+.lang-pill{display:flex;border:0.5px solid rgba(0,0,0,0.2);border-radius:20px;overflow:hidden;cursor:pointer}
+.lang-pill span{padding:5px 13px;font-size:12px;font-weight:500;color:#888;transition:all 0.2s}
+.lang-pill span.on{background:#D4537E;color:#fff}
+
+.cities-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:16px;scrollbar-width:none}
+.cities-scroll::-webkit-scrollbar{display:none}
+.city-card{flex-shrink:0;width:80px;cursor:pointer;transition:opacity 0.25s}
+.city-card.dim{opacity:0.3}
+.city-card-inner{width:80px;height:80px;border-radius:16px;background:#F0EEE8;border:2px solid transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:all 0.2s}
+.city-card.on .city-card-inner{border-color:#D4537E;background:#fff}
+.city-icon{font-size:28px;line-height:1}
+.city-label{font-size:11px;font-weight:500;color:#1a1a1a;text-align:center;line-height:1.2}
+.city-sub{font-size:9px;color:#999;text-align:center;line-height:1.3;margin-top:1px}
+
+.cats-bar{background:#fff;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.cats-bar::-webkit-scrollbar{display:none}
+.cat-btn{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 12px;border-radius:14px;border:0.5px solid rgba(0,0,0,0.1);background:#F5F4F0;cursor:pointer;transition:all 0.2s;min-width:58px}
+.cat-btn.on{background:#FBEAF0;border-color:#ED93B1}
+.cat-icon{font-size:18px;line-height:1;display:block}
+.cat-btn.bounce .cat-icon{animation:bonce 0.4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes bonce{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+.cat-label{font-size:10px;font-weight:500;color:#888}
+.cat-btn.on .cat-label{color:#993556}
+
+.feed{padding:12px 12px 100px;columns:2;column-gap:10px}
+.feed-item{break-inside:avoid;margin-bottom:10px;background:#fff;border-radius:14px;border:0.5px solid rgba(0,0,0,0.07);overflow:hidden;cursor:pointer;transition:transform 0.15s}
+.feed-item:active{transform:scale(0.97)}
+.feed-thumb{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:42px}
+.feed-thumb.tall{aspect-ratio:3/4}
+.fi-eat{background:#FFF1E6}.fi-drink{background:#F0EDF8}.fi-visit{background:#E8F0FB}.fi-stay{background:#FDF0F5}.fi-buy{background:#EDF8F0}
+.feed-info{padding:8px 10px 10px}
+.feed-name{font-size:13px;font-weight:500;color:#1a1a1a;line-height:1.3;margin-bottom:3px}
+.feed-sub{font-size:11px;color:#aaa;margin-bottom:5px}
+.feed-meta{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.feed-badge{font-size:9px;font-weight:500;padding:2px 6px;border-radius:8px;background:#FBEAF0;color:#993556;border:0.5px solid #ED93B1}
+.feed-score{font-size:10px;color:#854F0B;font-weight:500}
+
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:0.5px solid rgba(0,0,0,0.08);display:flex;z-index:40;padding-bottom:env(safe-area-inset-bottom,0)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:10px 4px 12px;cursor:pointer;border:none;background:none}
+.tab-icon-wrap{width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.tab-icon-wrap svg{width:22px;height:22px;stroke:#bbb;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
+.tab.on .tab-icon-wrap svg{stroke:#D4537E}
+.tab-label{font-size:10px;font-weight:500;color:#bbb;transition:color 0.2s;white-space:nowrap}
+.tab.on .tab-label{color:#D4537E}
+
+.page{display:none;padding:24px 20px 100px}
+.page.active{display:block}
+.page-title{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:6px}
+.page-sub{font-size:14px;color:#888;line-height:1.6;margin-bottom:24px}
+.howto-step{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.step-num{width:28px;height:28px;border-radius:50%;background:#FBEAF0;border:0.5px solid #ED93B1;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#993556;flex-shrink:0;margin-top:1px}
+.step-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+.step-desc{font-size:13px;color:#888;line-height:1.6}
+.faq-item{border-bottom:0.5px solid rgba(0,0,0,0.08);padding:16px 0;cursor:pointer}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq-q-text{font-size:14px;font-weight:500;color:#1a1a1a}
+.faq-arrow{font-size:12px;color:#bbb;transition:transform 0.2s;flex-shrink:0}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{font-size:13px;color:#888;line-height:1.7;margin-top:10px;display:none}
+.faq-item.open .faq-a{display:block}
+
+.sheet-overlay{display:none;position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;height:100%;background:rgba(0,0,0,0.45);align-items:flex-end;z-index:100}
+.sheet-overlay.open{display:flex}
+.sheet{background:#fff;border-radius:24px 24px 0 0;width:100%;max-height:90vh;overflow-y:auto;animation:slideUp 0.35s cubic-bezier(.32,.72,0,1)}
+.sheet::-webkit-scrollbar{display:none}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.sheet-handle{width:36px;height:4px;background:rgba(0,0,0,0.15);border-radius:2px;margin:12px auto 0}
+.sheet-close{position:absolute;top:16px;right:20px;width:28px;height:28px;border-radius:50%;background:#F5F4F0;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;color:#888;border:0.5px solid rgba(0,0,0,0.1)}
+.sheet-hero{width:100%;height:200px;display:flex;align-items:center;justify-content:center;font-size:72px}
+.sheet-body{padding:0 20px 32px}
+.sheet-en{font-size:20px;font-weight:500;color:#1a1a1a;line-height:1.2}
+.sheet-zh{font-size:14px;color:#888;margin-top:2px;margin-bottom:8px}
+.sheet-meta{display:flex;align-items:center;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.s-badge{font-size:10px;font-weight:500;padding:3px 8px;border-radius:10px;background:#FBEAF0;color:#993556;border:0.5px solid #ED93B1}
+.s-score{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:500;color:#854F0B;background:#FFF8E1;border:0.5px solid #FAC775;padding:3px 8px;border-radius:10px}
+.sheet-desc{font-size:14px;color:#666;line-height:1.7;margin-bottom:14px;font-style:italic;border-left:2px solid #ED93B1;padding-left:12px}
+.sec-label{font-size:10px;color:#bbb;margin-bottom:6px;letter-spacing:0.5px;text-transform:uppercase}
+.tags-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.stag{font-size:11px;padding:3px 10px;border-radius:10px;background:#F5F4F0;color:#666;border:0.5px solid rgba(0,0,0,0.08)}
+.review-links{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.rlink{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:12px;border:0.5px solid rgba(0,0,0,0.1);background:#F5F4F0;text-decoration:none}
+.rlink-logo{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500}
+.yelp-logo{background:#D32323;color:#fff}
+.google-logo{background:#fff;border:0.5px solid #eee;color:#4285F4;font-weight:700}
+.dp-logo{background:#F60;color:#fff}
+.rlink-text{font-size:12px;font-weight:500;color:#1a1a1a}
+.addr-row{display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:#F5F4F0;border-radius:12px;margin-bottom:12px}
+.addr-pin{width:16px;height:16px;flex-shrink:0;margin-top:1px;color:#bbb}
+.addr-text{font-size:12px;color:#888;line-height:1.5;flex:1}
+.map-links{display:flex;gap:8px}
+.mlink{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;border-radius:12px;border:0.5px solid rgba(0,0,0,0.1);background:#F5F4F0;text-decoration:none}
+.mlink-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.gmaps-icon{background:#4285F4}.apple-icon{background:#000}.amap-icon{background:#1B7EE8}
+.mlink-text{font-size:10px;color:#888;font-weight:500}
+.empty-state{padding:40px 20px;text-align:center;color:#bbb;font-size:14px;line-height:1.8}
+.loading-state{padding:40px 20px;text-align:center;color:#bbb;font-size:14px}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div id="pageList">
+    <div class="topbar">
+      <div class="topbar-row">
+        <div class="logo">Sky<em>'s</em> Guide</div>
+        <div class="lang-pill" onclick="toggleLang()">
+          <span id="lEN" class="on">EN</span>
+          <span id="lZH">中</span>
+        </div>
+      </div>
+      <div class="cities-scroll" id="citiesScroll"></div>
+    </div>
+    <div class="cats-bar" id="catsBar"></div>
+    <div class="feed" id="feed"></div>
+    <div class="empty-state" id="emptyState" style="display:none"></div>
+    <div class="loading-state" id="loadingState">Loading...</div>
+  </div>
+
+  <div id="pageHow" class="page">
+    <div class="page-title">How to use</div>
+    <div class="page-sub">Sky's Guide is a curated collection of places Sky personally loves — in the US and China.</div>
+    <div class="howto-step"><div class="step-num">1</div><div><div class="step-title">Pick a city</div><div class="step-desc">Tap a city card at the top. Currently live: Bay Area, LA, Shanghai, Guangzhou. More coming soon.</div></div></div>
+    <div class="howto-step"><div class="step-num">2</div><div><div class="step-title">Filter by vibe</div><div class="step-desc">Use 吃起来 / 喝起来 / 玩起来 / 住哪里 / 买买买 to narrow down. Tap again to clear.</div></div></div>
+    <div class="howto-step"><div class="step-num">3</div><div><div class="step-title">Tap any card</div><div class="step-desc">Get Sky's notes, AI tags, links to Yelp / Google / 大众点评, and one-tap navigation.</div></div></div>
+    <div class="howto-step"><div class="step-num">4</div><div><div class="step-title">Switch languages</div><div class="step-desc">Hit EN / 中 at the top right anytime.</div></div></div>
+    <div class="howto-step"><div class="step-num">5</div><div><div class="step-title">Sky tested badge</div><div class="step-desc">Places with ★ and "Sky tested" have been personally visited and approved. Prioritize these.</div></div></div>
+  </div>
+
+  <div id="pageQ" class="page">
+    <div class="page-title">Questions?</div>
+    <div class="page-sub">A few things people usually ask.</div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span class="faq-q-text">Is every place Sky-approved?</span><span class="faq-arrow">▾</span></div><div class="faq-a">All places have been personally visited by Sky or recommended by people she trusts. Places with the "Sky tested" badge are ones she's been to herself.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span class="faq-q-text">How often is this updated?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Whenever Sky discovers something worth adding. No fixed schedule, just good finds as they happen.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span class="faq-q-text">Can I suggest a place?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Yes! Drop Sky a message. If it clears the vibe check, it'll make it onto the list.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span class="faq-q-text">What do the AI tags mean?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Tags are auto-generated by AI based on the venue info and Sky's notes — a quick way to scan what a place is about.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span class="faq-q-text">More cities coming?</span><span class="faq-arrow">▾</span></div><div class="faq-a">Yes — Nanjing, New York, Tokyo and more are in the pipeline. Sky travels a lot, so the list grows when she does.</div></div>
+  </div>
+
+  <div class="tab-bar">
+    <div class="tab on" id="tab0" onclick="switchTab(0)">
+      <div class="tab-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <span class="tab-label">Sky's List</span>
+    </div>
+    <div class="tab" id="tab1" onclick="switchTab(1)">
+      <div class="tab-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+      <span class="tab-label">How to?</span>
+    </div>
+    <div class="tab" id="tab2" onclick="switchTab(2)">
+      <div class="tab-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+      <span class="tab-label">Questions?</span>
+    </div>
+  </div>
+
+  <div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet(event)">
+    <div class="sheet" style="position:relative">
+      <div class="sheet-handle"></div>
+      <div class="sheet-close" onclick="closeSheetDirect()">✕</div>
+      <div id="sheetContent"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ← 改这里：你的 GitHub username 和 repo 名
+const GH_USER = 'YOUR_GITHUB_USERNAME';
+const GH_REPO = 'skys-guide-data';
+
+const PLACES_URL = `https://raw.githubusercontent.com/${GH_USER}/${GH_REPO}/main/places.json`;
+
+const state = {lang:'en', city:0, cat:-1, tab:0};
+const CITIES = [
+  {key:'bayarea',en:'Bay Area',zh:'旧金山湾区',sub_en:'SF · Palo Alto',sub_zh:'旧金山 · 帕拉阿图',icon:'🌉'},
+  {key:'la',en:'Los Angeles',zh:'洛杉矶',sub_en:'LA · Pasadena',sub_zh:'洛杉矶 · 帕萨迪纳',icon:'🌴'},
+  {key:'shanghai',en:'Shanghai',zh:'上海',sub_en:'Jing\'an · Bund',sub_zh:'静安 · 外滩',icon:'🏙'},
+  {key:'guangzhou',en:'Guangzhou',zh:'广州',sub_en:'Tianhe · Liwan',sub_zh:'天河 · 荔湾',icon:'🌺'},
+  {key:'nanjing',en:'Nanjing',zh:'南京',sub_en:'Xuanwu · Qinhuai',sub_zh:'玄武 · 秦淮',icon:'🦆'},
+];
+const CATS = [
+  {key:'eat',label:'吃起来',icon:'🍜'},
+  {key:'drink',label:'喝起来',icon:'🍸'},
+  {key:'visit',label:'玩起来',icon:'🗺'},
+  {key:'stay',label:'住哪里',icon:'🛎'},
+  {key:'buy',label:'买买买',icon:'🛍'},
+];
+const CAT_BG = {eat:'#FFF1E6',drink:'#F0EDF8',visit:'#E8F0FB',stay:'#FDF0F5',buy:'#EDF8F0'};
+const isCN = k => ['shanghai','guangzhou','nanjing'].includes(k);
+
+let PLACES = [];
+
+async function loadPlaces() {
+  document.getElementById('loadingState').style.display = 'block';
+  try {
+    const res = await fetch(PLACES_URL + '?t=' + Date.now());
+    PLACES = await res.json();
+    document.getElementById('loadingState').style.display = 'none';
+    renderFeed();
+  } catch(e) {
+    document.getElementById('loadingState').textContent = 'Failed to load — check back soon!';
+  }
+}
+
+function switchTab(i) {
+  state.tab = i;
+  document.getElementById('pageList').style.display = i===0 ? 'block' : 'none';
+  document.getElementById('pageHow').className = 'page' + (i===1?' active':'');
+  document.getElementById('pageQ').className = 'page' + (i===2?' active':'');
+  [0,1,2].forEach(n => document.getElementById('tab'+n).className = 'tab'+(n===i?' on':''));
+  window.scrollTo(0,0);
+}
+
+function toggleFaq(el) {
+  const was = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>f.classList.remove('open'));
+  if(!was) el.classList.add('open');
+}
+
+function renderCities() {
+  document.getElementById('citiesScroll').innerHTML = CITIES.map((c,i)=>`
+    <div class="city-card${state.city===i?' on':' dim'}" onclick="selectCity(${i})">
+      <div class="city-card-inner">
+        <span class="city-icon">${c.icon}</span>
+        <span class="city-label">${state.lang==='zh'?c.zh:c.en}</span>
+        <span class="city-sub">${state.lang==='zh'?c.sub_zh:c.sub_en}</span>
+      </div>
+    </div>`).join('');
+}
+
+function renderCats() {
+  document.getElementById('catsBar').innerHTML = CATS.map((c,i)=>`
+    <div class="cat-btn${state.cat===i?' on':''}" id="catBtn${i}" onclick="selectCat(${i})">
+      <span class="cat-icon">${c.icon}</span>
+      <span class="cat-label">${c.label}</span>
+    </div>`).join('');
+}
+
+function renderFeed() {
+  const ck = CITIES[state.city].key;
+  const catKey = state.cat >= 0 ? CATS[state.cat].key : null;
+  const places = PLACES.filter(p => p.city===ck && (!catKey||p.cat===catKey));
+  const feed = document.getElementById('feed');
+  const empty = document.getElementById('emptyState');
+  if (!places.length) {
+    feed.style.display='none'; empty.style.display='block';
+    empty.textContent = state.lang==='zh' ? '这里还没有收录，敬请期待~' : 'No spots here yet — check back soon!';
+    return;
+  }
+  feed.style.display='block'; empty.style.display='none';
+  const cn = isCN(ck);
+  feed.innerHTML = places.map(p => {
+    const name = cn ? p.name_zh : p.name_en;
+    const sub = cn ? p.sub_zh : p.sub_en;
+    return `<div class="feed-item" onclick="openSheet(${p.id})">
+      <div class="feed-thumb fi-${p.cat}${p.tall?' tall':''}">${p.emoji||'📍'}</div>
+      <div class="feed-info">
+        <div class="feed-name">${name||p.name_en}</div>
+        <div class="feed-sub">${sub||''}</div>
+        <div class="feed-meta">
+          ${p.sky?`<span class="feed-badge">${state.lang==='zh'?'Sky亲测':'Sky tested'}</span>`:''}
+          ${p.sky?`<span class="feed-score">★ ${parseFloat(p.score||0).toFixed(1)}</span>`:''}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openSheet(id) {
+  const p = PLACES.find(x=>x.id===id); if(!p) return;
+  const cn = isCN(p.city);
+  const zh = state.lang==='zh';
+  const name_primary = cn ? p.name_zh : p.name_en;
+  const name_secondary = cn ? p.name_en : p.name_zh;
+  const desc = zh ? p.desc_zh : p.desc_en;
+  const tags = zh ? (p.tags_zh||p.tags_en) : (p.tags_en||[]);
+  const addr = cn ? p.addr_zh : p.addr_en;
+  let reviewLinks = '';
+  if(p.yelp) reviewLinks+=`<a class="rlink" href="${p.yelp}" target="_blank"><div class="rlink-logo yelp-logo">Y</div><span class="rlink-text">Yelp</span></a>`;
+  if(p.dianping) reviewLinks+=`<a class="rlink" href="${p.dianping}" target="_blank"><div class="rlink-logo dp-logo">点</div><span class="rlink-text">${zh?'大众点评':'Dianping'}</span></a>`;
+  if(p.google_page) reviewLinks+=`<a class="rlink" href="${p.google_page}" target="_blank"><div class="rlink-logo google-logo">G</div><span class="rlink-text">Google</span></a>`;
+  document.getElementById('sheetContent').innerHTML = `
+    <div class="sheet-hero fi-${p.cat}">${p.emoji||'📍'}</div>
+    <div class="sheet-body">
+      <div class="sheet-en">${name_primary||''}</div>
+      <div class="sheet-zh">${name_secondary||''}</div>
+      <div class="sheet-meta">
+        ${p.sky?`<span class="s-badge">${zh?'Sky亲测':'Sky tested'}</span>`:''}
+        ${p.sky?`<span class="s-score"><svg viewBox="0 0 12 12" fill="currentColor" width="11" height="11"><path d="M6 1l1.2 3.6H11L8.1 6.8l1.1 3.6L6 8.3l-3.2 2.1 1.1-3.6L1 4.6h3.8z"/></svg>${parseFloat(p.score||0).toFixed(1)}</span>`:''}
+      </div>
+      ${desc?`<div class="sheet-desc">${desc}</div>`:''}
+      ${tags&&tags.length?`<div class="sec-label">${zh?'AI 智能标签':'AI tags'}</div><div class="tags-wrap">${tags.map(t=>`<span class="stag">${t}</span>`).join('')}</div>`:''}
+      ${reviewLinks?`<div class="sec-label">${zh?'查看页面':'View pages'}</div><div class="review-links">${reviewLinks}</div>`:''}
+      ${addr?`<div class="sec-label">${zh?'地址':'Address'}</div>
+      <div class="addr-row">
+        <svg class="addr-pin" viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.485-2.015-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span class="addr-text">${addr}</span>
+      </div>`:''}
+      <div class="sec-label">${zh?'地图导航':'Navigate'}</div>
+      <div class="map-links">
+        <a class="mlink" href="${p.gmaps||p.google_page||'#'}" target="_blank"><div class="mlink-icon gmaps-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span class="mlink-text">${zh?'谷歌地图':'Google Maps'}</span></a>
+        <a class="mlink" href="${p.apple||'#'}" target="_blank"><div class="mlink-icon apple-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></div><span class="mlink-text">${zh?'苹果地图':'Apple Maps'}</span></a>
+        <a class="mlink" href="${p.amap||'#'}" target="_blank"><div class="mlink-icon amap-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><span class="mlink-text">${zh?'高德地图':'Amap'}</span></a>
+      </div>
+    </div>`;
+  document.getElementById('sheetOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSheet(e) { if(e.target===document.getElementById('sheetOverlay')) closeSheetDirect(); }
+function closeSheetDirect() { document.getElementById('sheetOverlay').classList.remove('open'); document.body.style.overflow=''; }
+
+function selectCity(i) { state.city=i; renderCities(); renderFeed(); }
+function selectCat(i) {
+  state.cat = state.cat===i ? -1 : i;
+  renderCats(); renderFeed();
+  if(state.cat>=0){const btn=document.getElementById('catBtn'+i);btn.classList.add('bounce');setTimeout(()=>btn.classList.remove('bounce'),400);}
+}
+function toggleLang() {
+  state.lang = state.lang==='en'?'zh':'en';
+  document.getElementById('lEN').className = state.lang==='en'?'on':'';
+  document.getElementById('lZH').className = state.lang==='zh'?'on':'';
+  renderCities(); renderCats(); renderFeed();
+}
+
+renderCities(); renderCats(); switchTab(0); loadPlaces();
+</script>
+</body>
+</html>
