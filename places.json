@@ -18,8 +18,20 @@
     "desc_zh": "湾区最好吃的龙虾卷，点经典黄油款。周末排队长，早点去。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Lobster roll", "Dungeness crab", "Casual", "Worth the drive", "Outdoor seating"],
-    "tags_zh": ["龙虾卷", "邓杰内斯蟹", "休闲", "值得专程", "户外座位"],
+    "tags_en": [
+      "Lobster roll",
+      "Dungeness crab",
+      "Casual",
+      "Worth the drive",
+      "Outdoor seating"
+    ],
+    "tags_zh": [
+      "龙虾卷",
+      "邓杰内斯蟹",
+      "休闲",
+      "值得专程",
+      "户外座位"
+    ],
     "yelp": "https://www.yelp.com/biz/new-england-lobster-market-and-eatery-burlingame",
     "google_page": "https://maps.google.com/?q=New+England+Lobster+Burlingame",
     "gmaps": "https://maps.google.com/?q=New+England+Lobster+Burlingame",
@@ -46,8 +58,20 @@
     "desc_zh": "至少提前两周买票，经常售罄。语音导览非常值得听，留出3-4小时。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Must-do", "Ferry ride", "Book ahead", "Audio tour", "Historic"],
-    "tags_zh": ["必去", "坐渡船", "提前订票", "语音导览", "历史"],
+    "tags_en": [
+      "Must-do",
+      "Ferry ride",
+      "Book ahead",
+      "Audio tour",
+      "Historic"
+    ],
+    "tags_zh": [
+      "必去",
+      "坐渡船",
+      "提前订票",
+      "语音导览",
+      "历史"
+    ],
     "yelp": "https://www.yelp.com/biz/alcatraz-island-san-francisco",
     "google_page": "https://maps.google.com/?q=Alcatraz+Island+San+Francisco",
     "gmaps": "https://maps.google.com/?q=Alcatraz+Island+San+Francisco",
@@ -74,8 +98,20 @@
     "desc_zh": "下午5点去，刚出炉的乡村面包是湾区天花板。排队完全值得。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Country bread", "Queue up", "5pm bread", "SF icon", "Morning bun"],
-    "tags_zh": ["乡村面包", "排队", "5点出炉", "SF经典", "晨包"],
+    "tags_en": [
+      "Country bread",
+      "Queue up",
+      "5pm bread",
+      "SF icon",
+      "Morning bun"
+    ],
+    "tags_zh": [
+      "乡村面包",
+      "排队",
+      "5点出炉",
+      "SF经典",
+      "晨包"
+    ],
     "yelp": "https://www.yelp.com/biz/tartine-bakery-san-francisco",
     "google_page": "https://maps.google.com/?q=Tartine+Bakery+San+Francisco",
     "gmaps": "https://maps.google.com/?q=Tartine+Bakery+San+Francisco",
@@ -102,8 +138,20 @@
     "desc_zh": "从旧金山出发的完美半日游，春天郁金香和紫藤盛开，非常治愈。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Day trip", "Spring blooms", "Photography", "Historic estate", "Peaceful"],
-    "tags_zh": ["一日游", "春季赏花", "摄影", "历史庄园", "治愈"],
+    "tags_en": [
+      "Day trip",
+      "Spring blooms",
+      "Photography",
+      "Historic estate",
+      "Peaceful"
+    ],
+    "tags_zh": [
+      "一日游",
+      "春季赏花",
+      "摄影",
+      "历史庄园",
+      "治愈"
+    ],
     "yelp": "https://www.yelp.com/biz/filoli-woodside",
     "google_page": "https://maps.google.com/?q=Filoli+Garden+Woodside",
     "gmaps": "https://maps.google.com/?q=Filoli+Garden+Woodside",
@@ -130,8 +178,20 @@
     "desc_zh": "修缮精良的老城区，晚上散步氛围极好，超级出片。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Old town vibes", "Evening stroll", "Photogenic", "Heritage", "Walking street"],
-    "tags_zh": ["老城氛围", "夜晚散步", "出片", "历史建筑", "步行街"],
+    "tags_en": [
+      "Old town vibes",
+      "Evening stroll",
+      "Photogenic",
+      "Heritage",
+      "Walking street"
+    ],
+    "tags_zh": [
+      "老城氛围",
+      "夜晚散步",
+      "出片",
+      "历史建筑",
+      "步行街"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Guangyue+Tiandi+Guangzhou",
     "gmaps": "https://maps.google.com/?q=Guangyue+Tiandi+Guangzhou",
@@ -158,8 +218,20 @@
     "desc_zh": "广州最好的酒吧之一。鸡尾酒出色，氛围有态度但不吵，10点后去最好。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Craft cocktails", "Late night", "Cool crowd", "Low-key", "Top GZ bar"],
-    "tags_zh": ["精调鸡尾酒", "深夜", "有态度", "低调", "广州顶级"],
+    "tags_en": [
+      "Craft cocktails",
+      "Late night",
+      "Cool crowd",
+      "Low-key",
+      "Top GZ bar"
+    ],
+    "tags_zh": [
+      "精调鸡尾酒",
+      "深夜",
+      "有态度",
+      "低调",
+      "广州顶级"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=No+Social+Bar+Guangzhou",
     "gmaps": "https://maps.google.com/?q=No+Social+Bar+Guangzhou",
@@ -186,8 +258,20 @@
     "desc_zh": "广州我去过最好的潮汕菜。卤水鹅和腌蟹绝了，必须提前预订。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Chaoshan", "Premium", "Braised goose", "Marinated crab", "Book ahead"],
-    "tags_zh": ["潮汕菜", "精致", "卤水鹅", "腌蟹", "需预订"],
+    "tags_en": [
+      "Chaoshan",
+      "Premium",
+      "Braised goose",
+      "Marinated crab",
+      "Book ahead"
+    ],
+    "tags_zh": [
+      "潮汕菜",
+      "精致",
+      "卤水鹅",
+      "腌蟹",
+      "需预订"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Zhizheng+Chaoshan+IGC+Guangzhou",
     "gmaps": "https://maps.google.com/?q=Zhizheng+Chaoshan+IGC+Guangzhou",
@@ -201,7 +285,7 @@
     "cat": "stay",
     "emoji": "🏨",
     "tall": false,
-    "image_url": "",
+    "image_url": "https://res.cloudinary.com/dgh1jmwtb/image/upload/v1776207058/r8mnei8vt569f3eksai1.avif",
     "name_en": "The PuLi Hotel",
     "name_zh": "璞丽酒店",
     "sub_en": "Jing'an · Boutique luxury",
@@ -209,19 +293,31 @@
     "addr_en": "1 Changde Rd, Jing'an, Shanghai 200040",
     "addr_zh": "上海市静安区常德路1号",
     "sky": true,
-    "score": 5.0,
-    "desc_en": "My favorite hotel in Shanghai, full stop. Exceptional service, stunning interiors, perfect Jing'an location.",
-    "desc_zh": "我在上海最爱的酒店，没有之一。服务、设计、位置全部满分。",
-    "desc_en_edited": false,
-    "desc_zh_edited": false,
-    "tags_en": ["Top pick", "Boutique", "Quiet luxury", "Jing'an", "Exceptional service"],
-    "tags_zh": ["首推", "精品", "低调奢华", "静安", "服务卓越"],
-    "yelp": "",
+    "score": 4.8,
+    "desc_en": "One of my favorite hotels in Shanghai. It features a modern Chinese design style, top-tier service, and a prime location. Staying here allows for an immersive experience of authentic old Shanghai street culture, all within walking distance.",
+    "desc_zh": "上海最喜欢的酒店之一，新中式设计风格，顶级服务+顶级地段，周围步行可沉浸式体验真正的上海老街文化",
+    "desc_en_edited": true,
+    "desc_zh_edited": true,
+    "tags_en": [
+      "Quiet luxury",
+      "Jing'an",
+      "Exceptional service",
+      "Sky's Top 5",
+      "Traditional Chinese"
+    ],
+    "tags_zh": [
+      "Quiet luxury",
+      "Jing'an",
+      "Exceptional service",
+      "Sky's Top 5",
+      "Traditional Chinese"
+    ],
+    "yelp": "https://guide.michelin.com/en/hotels-stays/shanghai/the-puli-shanghai-4541?arr=2026-05-12&dep=2026-05-13&nA=1&nC=0&nR=1",
     "google_page": "https://maps.google.com/?q=The+PuLi+Hotel+Shanghai",
     "gmaps": "https://maps.google.com/?q=The+PuLi+Hotel+Shanghai",
     "apple": "https://maps.apple.com/?q=The+PuLi+Hotel+Shanghai",
     "amap": "https://uri.amap.com/search?keyword=璞丽酒店&city=上海",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/璞丽酒店"
+    "dianping": "http://dpurl.cn/dwyNBG8z"
   },
   {
     "id": 9,
@@ -242,8 +338,20 @@
     "desc_zh": "来上海必去，没有商量余地。皮薄汤鲜，每次都完美。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Must go", "Xiaolongbao", "Local gem", "Affordable", "Thin skin"],
-    "tags_zh": ["必去", "小笼包", "本地人最爱", "亲民价格", "皮薄汤鲜"],
+    "tags_en": [
+      "Must go",
+      "Xiaolongbao",
+      "Local gem",
+      "Affordable",
+      "Thin skin"
+    ],
+    "tags_zh": [
+      "必去",
+      "小笼包",
+      "本地人最爱",
+      "亲民价格",
+      "皮薄汤鲜"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Lailai+Xiaolong+Shanghai",
     "gmaps": "https://maps.google.com/?q=Lailai+Xiaolong+Shanghai",
@@ -270,8 +378,20 @@
     "desc_zh": "全球前50，实至名归。找隐藏入口，三层各有惊喜，每层风格完全不同。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["World Top 50", "Hidden entrance", "3 floors", "Unmissable", "Craft cocktails"],
-    "tags_zh": ["全球50佳", "隐藏入口", "三层空间", "不可错过", "精调鸡尾酒"],
+    "tags_en": [
+      "World Top 50",
+      "Hidden entrance",
+      "3 floors",
+      "Unmissable",
+      "Craft cocktails"
+    ],
+    "tags_zh": [
+      "全球50佳",
+      "隐藏入口",
+      "三层空间",
+      "不可错过",
+      "精调鸡尾酒"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Speaklow+Shanghai",
     "gmaps": "https://maps.google.com/?q=Speaklow+Shanghai",
@@ -298,8 +418,20 @@
     "desc_zh": "稍微偏远但绝对值得专程。在我心里是上海最好的精品咖啡馆。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Must go", "Specialty coffee", "Worth the trip", "Hidden gem", "Single origin"],
-    "tags_zh": ["必去", "精品咖啡", "值得专程", "隐藏宝藏", "单品豆"],
+    "tags_en": [
+      "Must go",
+      "Specialty coffee",
+      "Worth the trip",
+      "Hidden gem",
+      "Single origin"
+    ],
+    "tags_zh": [
+      "必去",
+      "精品咖啡",
+      "值得专程",
+      "隐藏宝藏",
+      "单品豆"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Geecho+Brew+Shanghai",
     "gmaps": "https://maps.google.com/?q=Geecho+Brew+Shanghai",
@@ -326,8 +458,20 @@
     "desc_zh": "外滩标志性位置，历史建筑令人惊叹。即使不住，Long Bar也值得专程一去。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Bund view", "Historic building", "Iconic", "Long Bar", "Luxury"],
-    "tags_zh": ["外滩景观", "历史建筑", "标志性", "Long Bar", "奢华"],
+    "tags_en": [
+      "Bund view",
+      "Historic building",
+      "Iconic",
+      "Long Bar",
+      "Luxury"
+    ],
+    "tags_zh": [
+      "外滩景观",
+      "历史建筑",
+      "标志性",
+      "Long Bar",
+      "奢华"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Waldorf+Astoria+Shanghai+Bund",
     "gmaps": "https://maps.google.com/?q=Waldorf+Astoria+Shanghai+Bund",
@@ -354,8 +498,20 @@
     "desc_zh": "外滩可靠的奢华选择，管家服务出色，每次都是安全牌。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Bund", "Butler service", "Reliable luxury", "Classic", "Safe choice"],
-    "tags_zh": ["外滩", "管家服务", "可靠奢华", "经典", "安全牌"],
+    "tags_en": [
+      "Bund",
+      "Butler service",
+      "Reliable luxury",
+      "Classic",
+      "Safe choice"
+    ],
+    "tags_zh": [
+      "外滩",
+      "管家服务",
+      "可靠奢华",
+      "经典",
+      "安全牌"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=St+Regis+Bund+Shanghai",
     "gmaps": "https://maps.google.com/?q=St+Regis+Bund+Shanghai",
@@ -382,8 +538,20 @@
     "desc_zh": "出色的本帮家常菜，不做作，吃完非常满足，正是你需要的那种踏实。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Shanghainese", "Home cooking", "Unpretentious", "Local favorite", "Comforting"],
-    "tags_zh": ["本帮菜", "家常", "不做作", "本地人爱去", "踏实"],
+    "tags_en": [
+      "Shanghainese",
+      "Home cooking",
+      "Unpretentious",
+      "Local favorite",
+      "Comforting"
+    ],
+    "tags_zh": [
+      "本帮菜",
+      "家常",
+      "不做作",
+      "本地人爱去",
+      "踏实"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Renhe+Restaurant+Shanghai",
     "gmaps": "https://maps.google.com/?q=Renhe+Restaurant+Shanghai",
@@ -410,8 +578,20 @@
     "desc_zh": "历史老宅里的经典本帮菜，是上海最美的餐厅环境之一，值得专程。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Shanghainese", "Heritage villa", "Fine dining", "Beautiful setting", "Special occasion"],
-    "tags_zh": ["本帮菜", "历史老宅", "精致", "环境绝美", "特别场合"],
+    "tags_en": [
+      "Shanghainese",
+      "Heritage villa",
+      "Fine dining",
+      "Beautiful setting",
+      "Special occasion"
+    ],
+    "tags_zh": [
+      "本帮菜",
+      "历史老宅",
+      "精致",
+      "环境绝美",
+      "特别场合"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Fu+1039+Shanghai",
     "gmaps": "https://maps.google.com/?q=Fu+1039+Shanghai",
@@ -438,8 +618,20 @@
     "desc_zh": "亚洲50佳，氛围完全对得起这个名头。经典鸡尾酒做得无懈可击，人群也很对味。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Asia Top 50", "Classic cocktails", "Great vibe", "Xuhui", "Unmissable"],
-    "tags_zh": ["亚洲50佳", "经典鸡尾酒", "氛围好", "徐汇", "不可错过"],
+    "tags_en": [
+      "Asia Top 50",
+      "Classic cocktails",
+      "Great vibe",
+      "Xuhui",
+      "Unmissable"
+    ],
+    "tags_zh": [
+      "亚洲50佳",
+      "经典鸡尾酒",
+      "氛围好",
+      "徐汇",
+      "不可错过"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Union+Trading+Company+Shanghai",
     "gmaps": "https://maps.google.com/?q=Union+Trading+Company+Shanghai",
@@ -466,8 +658,20 @@
     "desc_zh": "上海最好的夜店体验，没有之一。一栋楼11个吧加夜店，每层风格不同，总有你的那一层。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Best club", "11 bars", "Late night", "Party", "Unmissable"],
-    "tags_zh": ["最佳夜店", "11个吧", "深夜", "派对", "不可错过"],
+    "tags_en": [
+      "Best club",
+      "11 bars",
+      "Late night",
+      "Party",
+      "Unmissable"
+    ],
+    "tags_zh": [
+      "最佳夜店",
+      "11个吧",
+      "深夜",
+      "派对",
+      "不可错过"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=INS+Club+Shanghai",
     "gmaps": "https://maps.google.com/?q=INS+Club+Shanghai",
@@ -494,8 +698,20 @@
     "desc_zh": "真正的隐藏宝藏，大多数人都直接路过。安静有氛围，是老上海的一片净土。",
     "desc_en_edited": false,
     "desc_zh_edited": false,
-    "tags_en": ["Hidden gem", "Historic", "Peaceful", "Off the beaten path", "Old Shanghai"],
-    "tags_zh": ["隐藏宝藏", "历史", "安静", "小众", "老上海"],
+    "tags_en": [
+      "Hidden gem",
+      "Historic",
+      "Peaceful",
+      "Off the beaten path",
+      "Old Shanghai"
+    ],
+    "tags_zh": [
+      "隐藏宝藏",
+      "历史",
+      "安静",
+      "小众",
+      "老上海"
+    ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Hotung+Robert+Residence+Shanghai",
     "gmaps": "https://maps.google.com/?q=Hotung+Robert+Residence+Shanghai",
