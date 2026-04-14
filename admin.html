@@ -7,10 +7,11 @@
 <title>Sky's Guide — Admin</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#F5F4F0}
-.admin{max-width:640px;margin:0 auto;min-height:100vh;background:#F5F4F0}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;background:#F5F4F0;min-height:100vh}
+.admin{max-width:100%;margin:0 auto;min-height:100vh}
 
-.login-screen{padding:0 24px;display:flex;flex-direction:column;align-items:center;min-height:100vh;justify-content:center}
+/* LOGIN */
+.login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px}
 .login-logo{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:4px;text-align:center}
 .login-logo em{color:#D4537E;font-style:normal}
 .login-sub{font-size:13px;color:#aaa;margin-bottom:40px;text-align:center}
@@ -20,24 +21,120 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;ba
 .pin-input:focus{border-color:#D4537E;box-shadow:0 0 0 3px rgba(212,83,126,0.12)}
 .pin-input.error{border-color:#E24B4A;animation:shake 0.3s}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
-.pin-go{padding:14px 20px;border-radius:14px;background:#D4537E;color:#fff;font-size:15px;font-weight:500;border:none;cursor:pointer;-webkit-appearance:none}
+.pin-go{padding:14px 20px;border-radius:14px;background:#D4537E;color:#fff;font-size:15px;font-weight:500;border:none;cursor:pointer}
 .pin-go:active{background:#993556}
 .pin-err{font-size:12px;color:#E24B4A;min-height:16px;text-align:center}
 
-.main-screen{display:none}
+/* MAIN */
+.main-screen{display:none;flex-direction:column;min-height:100vh}
 .topbar{background:#fff;padding:14px 20px;border-bottom:0.5px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:50}
 .topbar-logo{font-size:16px;font-weight:500;color:#1a1a1a}
 .topbar-logo em{color:#D4537E;font-style:normal}
 .topbar-logo span{font-size:12px;color:#aaa;font-weight:400;margin-left:4px}
-.topbar-right{display:flex;gap:8px;align-items:center}
-.icon-btn{padding:7px 13px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:12px;color:#666;cursor:pointer;white-space:nowrap;-webkit-appearance:none;display:flex;align-items:center;gap:5px}
+.topbar-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.icon-btn{padding:7px 13px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:12px;color:#666;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap}
 .icon-btn:active{background:#eee}
-.add-btn{padding:7px 14px;border-radius:9px;background:#D4537E;color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer;-webkit-appearance:none}
+.add-btn{padding:7px 14px;border-radius:9px;background:#D4537E;color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer;white-space:nowrap}
 .add-btn:active{background:#993556}
 .dot{width:7px;height:7px;border-radius:50%;background:#ddd;flex-shrink:0}
 .dot.ok{background:#639922}.dot.err{background:#E24B4A}
+.save-all-btn{padding:7px 16px;border-radius:9px;background:#1a1a1a;color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer;white-space:nowrap}
+.save-all-btn:active{background:#333}
+.save-all-btn:disabled{opacity:0.5;cursor:not-allowed}
 
-.settings-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:200;align-items:flex-end;justify-content:center}
+/* FILTERS */
+.filters-bar{background:#fff;padding:10px 20px;border-bottom:0.5px solid rgba(0,0,0,0.08);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.city-filter{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1}
+.city-filter::-webkit-scrollbar{display:none}
+.cf-btn{flex-shrink:0;padding:5px 12px;border-radius:16px;font-size:12px;border:0.5px solid rgba(0,0,0,0.1);background:#F5F4F0;color:#888;cursor:pointer;white-space:nowrap}
+.cf-btn.on{background:#D4537E;border-color:#D4537E;color:#fff}
+.count-badge{font-size:12px;color:#aaa;white-space:nowrap}
+
+/* GRID */
+.grid-area{padding:16px 20px 40px;display:flex;flex-direction:column;gap:12px}
+.grid-header{display:grid;grid-template-columns:32px 56px 1fr 90px 80px 80px 100px 80px;gap:8px;padding:0 12px;align-items:center}
+.grid-header span{font-size:10px;font-weight:500;color:#bbb;letter-spacing:0.3px;white-space:nowrap}
+.place-card{background:#fff;border:0.5px solid rgba(0,0,0,0.08);border-radius:14px;overflow:hidden;transition:border-color 0.2s}
+.place-card.dirty{border-color:#D4537E}
+.place-card.drag-over{border-color:#D4537E;background:#FBEAF0}
+.place-card.dragging{opacity:0.4}
+.card-row{display:grid;grid-template-columns:32px 56px 1fr 90px 80px 80px 100px 80px;gap:8px;padding:10px 12px;align-items:center;cursor:pointer}
+.card-row:hover{background:#FAFAF9}
+.drag-handle{color:#ccc;font-size:16px;cursor:grab;text-align:center;letter-spacing:-2px;user-select:none}
+.card-img-wrap{width:48px;height:48px;border-radius:10px;overflow:hidden;position:relative;flex-shrink:0;background:#F5F4F0;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover}
+.img-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:500;border-radius:10px}
+.card-img-wrap:hover .img-overlay{display:flex}
+.card-names{display:flex;flex-direction:column;gap:2px;min-width:0}
+.name-en{font-size:13px;font-weight:500;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.name-zh{font-size:11px;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge-row{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.city-badge{font-size:10px;padding:2px 7px;border-radius:8px;background:#F5F4F0;color:#888;white-space:nowrap}
+.cat-badge{font-size:10px;padding:2px 7px;border-radius:8px;white-space:nowrap}
+.cat-eat{background:#FFF1E6;color:#854F0B}
+.cat-drink{background:#F0EDF8;color:#534AB7}
+.cat-visit{background:#E8F0FB;color:#185FA5}
+.cat-stay{background:#FDF0F5;color:#993556}
+.cat-buy{background:#EDF8F0;color:#3B6D11}
+.sky-toggle-sm{width:32px;height:19px;border-radius:10px;background:#ddd;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0}
+.sky-toggle-sm.on{background:#D4537E}
+.sky-toggle-sm::after{content:'';position:absolute;width:15px;height:15px;border-radius:50%;background:#fff;top:2px;left:2px;transition:transform 0.2s}
+.sky-toggle-sm.on::after{transform:translateX(13px)}
+.score-sm{width:52px;padding:5px 6px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.12);font-size:13px;font-weight:500;color:#1a1a1a;text-align:center;font-family:inherit;outline:none;background:#fff}
+.score-sm:focus{border-color:#D4537E}
+.row-actions{display:flex;gap:5px;justify-content:flex-end}
+.edit-btn-sm{padding:5px 10px;border-radius:7px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:11px;color:#555;cursor:pointer;white-space:nowrap}
+.edit-btn-sm:active{background:#eee}
+.del-btn-sm{padding:5px 8px;border-radius:7px;border:0.5px solid rgba(0,0,0,0.08);background:transparent;font-size:11px;color:#ccc;cursor:pointer}
+.del-btn-sm:active{background:#FCEBEB;color:#A32D2D}
+
+/* EXPAND */
+.card-expand{display:none;border-top:0.5px solid rgba(0,0,0,0.06);padding:16px;background:#FAFAF9}
+.card-expand.open{display:block}
+.expand-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.expand-grid{grid-template-columns:1fr}.grid-header{display:none}.card-row{grid-template-columns:32px 48px 1fr 60px;gap:6px}.card-img-wrap{width:40px;height:40px}.badge-row,.sky-toggle-sm,.score-sm{display:none}}
+.e-group{display:flex;flex-direction:column;gap:4px}
+.e-label{font-size:10px;font-weight:500;color:#bbb;letter-spacing:0.3px;display:flex;align-items:center;gap:5px}
+.ai-chip{font-size:9px;padding:1px 5px;border-radius:5px;background:#E8F0FB;color:#185FA5;border:0.5px solid #85B7EB}
+.edited-chip{font-size:9px;padding:1px 5px;border-radius:5px;background:#FBEAF0;color:#993556;border:0.5px solid #ED93B1}
+.e-input{width:100%;padding:9px 11px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;font-size:14px;color:#1a1a1a;font-family:inherit;outline:none;resize:vertical;transition:border-color 0.2s}
+.e-input:focus{border-color:#D4537E}
+.e-input.ai-filled{border-color:#85B7EB;background:#E6F1FB}
+.e-input.ai-edited{border-color:#ED93B1;background:#FBEAF0}
+.e-select{width:100%;padding:9px 11px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;font-size:14px;color:#1a1a1a;font-family:inherit;outline:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23aaa' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center}
+.e-select:focus{border-color:#D4537E}
+.tags-editor{display:flex;flex-wrap:wrap;gap:5px;padding:8px 10px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;min-height:42px;cursor:text}
+.tags-editor:focus-within{border-color:#D4537E}
+.tag-pill{display:flex;align-items:center;gap:3px;padding:3px 8px;border-radius:7px;background:#F0EEE8;color:#444;font-size:12px}
+.tag-x{cursor:pointer;color:#aaa;font-size:10px;padding:0 1px}
+.tag-inp{border:none;outline:none;font-size:13px;color:#1a1a1a;background:transparent;min-width:70px;flex:1;font-family:inherit;padding:1px 0}
+.img-upload-area{border:1.5px dashed rgba(0,0,0,0.15);border-radius:10px;padding:20px;text-align:center;cursor:pointer;background:#fff;transition:all 0.2s;position:relative}
+.img-upload-area:hover{border-color:#D4537E;background:#FBEAF0}
+.img-upload-area.has-img{border-style:solid;border-color:rgba(0,0,0,0.1);padding:0;overflow:hidden}
+.img-upload-area img{width:100%;height:140px;object-fit:cover;display:block;border-radius:8px}
+.img-upload-text{font-size:13px;color:#aaa}
+.img-upload-sub{font-size:11px;color:#ccc;margin-top:3px}
+.img-progress{position:absolute;inset:0;background:rgba(255,255,255,0.85);display:none;align-items:center;justify-content:center;flex-direction:column;gap:6px;border-radius:8px}
+.img-progress.show{display:flex}
+.progress-bar{width:80%;height:3px;background:#eee;border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:#D4537E;border-radius:2px;transition:width 0.3s}
+.img-actions{display:flex;gap:6px;margin-top:6px}
+.img-action-btn{flex:1;padding:7px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:12px;color:#666;cursor:pointer;text-align:center}
+.img-action-btn:active{background:#eee}
+.ai-btn-sm{width:100%;padding:10px;border-radius:9px;border:1.5px dashed #85B7EB;background:#E6F1FB;color:#185FA5;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.ai-btn-sm:active{background:#B5D4F4}
+.link-wrap-sm{display:flex;gap:6px}
+.link-wrap-sm .e-input{flex:1;min-width:0}
+.fetch-btn-sm{padding:9px 13px;border-radius:9px;background:#D4537E;color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer;flex-shrink:0}
+.fetch-btn-sm:active{background:#993556}
+.expand-footer{display:flex;justify-content:flex-end;gap:8px;margin-top:14px;padding-top:12px;border-top:0.5px solid rgba(0,0,0,0.06)}
+.save-card-btn{padding:8px 20px;border-radius:9px;background:#D4537E;color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer}
+.save-card-btn:active{background:#993556}
+.save-card-btn:disabled{opacity:0.5;cursor:not-allowed}
+.cancel-btn{padding:8px 14px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:13px;color:#666;cursor:pointer}
+
+/* SETTINGS MODAL */
+.settings-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:200;align-items:flex-end;justify-content:center}
 .settings-modal.open{display:flex}
 .settings-sheet{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:640px;padding:20px 20px 40px;max-height:90vh;overflow-y:auto;animation:slideUp 0.3s cubic-bezier(.32,.72,0,1)}
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
@@ -48,104 +145,64 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;ba
 .settings-hint code{background:#fff;padding:1px 5px;border-radius:4px;font-size:12px}
 .s-field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
 .s-label{font-size:11px;font-weight:500;color:#888;letter-spacing:0.3px}
-.s-input{width:100%;padding:11px 13px;border-radius:11px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;font-size:15px;color:#1a1a1a;outline:none;font-family:inherit;-webkit-appearance:none;transition:border-color 0.2s}
+.s-input{width:100%;padding:11px 13px;border-radius:11px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;font-size:15px;color:#1a1a1a;outline:none;font-family:inherit;transition:border-color 0.2s}
 .s-input:focus{border-color:#D4537E}
-.settings-save{width:100%;padding:13px;border-radius:12px;background:#D4537E;color:#fff;font-size:15px;font-weight:500;border:none;cursor:pointer;margin-top:4px;-webkit-appearance:none}
+.settings-save{width:100%;padding:13px;border-radius:12px;background:#D4537E;color:#fff;font-size:15px;font-weight:500;border:none;cursor:pointer;margin-top:4px}
 .settings-save:active{background:#993556}
 .gh-banner{padding:10px 14px;border-radius:10px;font-size:13px;display:none;align-items:center;gap:8px;border:0.5px solid;margin-top:10px}
-.gh-banner.ok{background:#EAF3DE;border-color:#97C459;color:#27500A}
-.gh-banner.err{background:#FCEBEB;border-color:#F09595;color:#A32D2D}
-.gh-banner.loading{background:#F5F4F0;border-color:#ddd;color:#888}
+.gh-banner.ok{background:#EAF3DE;border-color:#97C459;color:#27500A;display:flex}
+.gh-banner.err{background:#FCEBEB;border-color:#F09595;color:#A32D2D;display:flex}
+.gh-banner.loading{background:#F5F4F0;border-color:#ddd;color:#888;display:flex}
 
-.list-view{padding:16px 20px;display:flex;flex-direction:column;gap:10px}
-.list-header{display:flex;align-items:center;justify-content:space-between}
-.list-title{font-size:15px;font-weight:500;color:#1a1a1a}
-.list-count{font-size:12px;color:#aaa}
-.list-hint{font-size:11px;color:#bbb}
-.city-filter{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.city-filter::-webkit-scrollbar{display:none}
-.cf-btn{flex-shrink:0;padding:5px 12px;border-radius:16px;font-size:12px;border:0.5px solid rgba(0,0,0,0.1);background:#fff;color:#888;cursor:pointer;white-space:nowrap}
-.cf-btn.on{background:#D4537E;border-color:#D4537E;color:#fff}
-.place-row{background:#fff;border:0.5px solid rgba(0,0,0,0.07);border-radius:13px;padding:12px 14px;display:flex;align-items:center;gap:12px;user-select:none;transition:all 0.15s}
-.place-row.dragging{opacity:0.45;border-color:#D4537E}
-.place-row.drag-over{border-color:#D4537E;background:#FBEAF0}
-.drag-handle{color:#ccc;font-size:14px;flex-shrink:0;cursor:grab;padding:0 2px;letter-spacing:-1px}
-.place-emoji{font-size:22px;flex-shrink:0}
-.place-info{flex:1;min-width:0}
-.place-name{font-size:14px;font-weight:500;color:#1a1a1a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.place-meta{font-size:11px;color:#aaa;margin-top:2px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
-.sky-pill{font-size:10px;padding:1px 6px;border-radius:6px;background:#FBEAF0;color:#993556;border:0.5px solid #ED93B1}
-.row-actions{display:flex;gap:6px;flex-shrink:0}
-.edit-btn{padding:6px 12px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:12px;color:#555;cursor:pointer}
-.edit-btn:active{background:#eee}
-.del-btn{padding:6px 10px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.08);background:transparent;font-size:12px;color:#bbb;cursor:pointer}
-.del-btn:active{background:#FCEBEB;color:#A32D2D}
-.empty-list{font-size:13px;color:#bbb;text-align:center;padding:40px 0;line-height:1.8}
-
-.form-view{display:none;flex-direction:column}
-.form-topbar{background:#fff;padding:14px 20px;border-bottom:0.5px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:40}
-.back-btn{padding:7px 13px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.12);background:#F5F4F0;font-size:13px;color:#666;cursor:pointer;-webkit-appearance:none}
-.back-btn:active{background:#eee}
-.form-title{font-size:15px;font-weight:500;color:#1a1a1a;flex:1}
+/* ADD MODAL */
+.add-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:200;align-items:flex-end;justify-content:center}
+.add-modal.open{display:flex}
+.add-sheet{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:640px;max-height:92vh;overflow-y:auto;animation:slideUp 0.3s cubic-bezier(.32,.72,0,1)}
+.add-sheet::-webkit-scrollbar{display:none}
+.add-topbar{padding:16px 20px;border-bottom:0.5px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:10}
+.add-title{font-size:16px;font-weight:500;color:#1a1a1a}
+.close-btn{width:28px;height:28px;border-radius:50%;background:#F5F4F0;border:0.5px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;color:#888}
 .mode-tabs{display:flex;background:#fff;border-bottom:0.5px solid rgba(0,0,0,0.08);padding:0 20px;overflow-x:auto;scrollbar-width:none}
 .mode-tabs::-webkit-scrollbar{display:none}
-.mode-tab{flex-shrink:0;padding:12px 16px;font-size:13px;font-weight:500;color:#bbb;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap}
+.mode-tab{flex-shrink:0;padding:11px 16px;font-size:13px;font-weight:500;color:#bbb;cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s;white-space:nowrap}
 .mode-tab.on{color:#D4537E;border-bottom-color:#D4537E}
-.form-body{padding:20px;display:flex;flex-direction:column;gap:16px}
-.upload-zone{border:1.5px dashed rgba(0,0,0,0.15);border-radius:16px;padding:32px 20px;text-align:center;cursor:pointer;background:#fff}
+.add-body{padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+.upload-zone{border:1.5px dashed rgba(0,0,0,0.15);border-radius:14px;padding:28px 20px;text-align:center;cursor:pointer;background:#fff}
 .upload-zone:active{border-color:#D4537E;background:#FBEAF0}
-.upload-icon{font-size:28px;margin-bottom:8px}
-.upload-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:4px}
+.upload-icon{font-size:26px;margin-bottom:6px}
+.upload-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
 .upload-sub{font-size:12px;color:#aaa}
-.f-group{display:flex;flex-direction:column;gap:5px}
-.f-label{font-size:11px;font-weight:500;color:#888;letter-spacing:0.3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.ai-chip{font-size:9px;padding:2px 6px;border-radius:6px;background:#E8F0FB;color:#185FA5;border:0.5px solid #85B7EB}
-.edited-chip{font-size:9px;padding:2px 6px;border-radius:6px;background:#FBEAF0;color:#993556;border:0.5px solid #ED93B1}
-.f-input{width:100%;padding:11px 13px;border-radius:11px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;font-size:15px;color:#1a1a1a;resize:vertical;font-family:inherit;transition:border-color 0.2s;outline:none;-webkit-appearance:none}
-.f-input:focus{border-color:#D4537E}
-.f-input.ai-filled{border-color:#85B7EB;background:#E6F1FB}
-.f-input.ai-edited{border-color:#ED93B1;background:#FBEAF0}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:400px){.f-row{grid-template-columns:1fr}}
-.f-select{width:100%;padding:11px 13px;border-radius:11px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;font-size:15px;color:#1a1a1a;font-family:inherit;outline:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23aaa' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
-.f-select:focus{border-color:#D4537E}
-.tags-editor{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;border-radius:11px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;min-height:48px;cursor:text}
-.tags-editor:focus-within{border-color:#D4537E}
-.tags-editor.ai-filled{border-color:#85B7EB;background:#E6F1FB}
-.tag-pill{display:flex;align-items:center;gap:4px;padding:4px 9px;border-radius:8px;background:#F0EEE8;color:#444;font-size:13px}
-.tag-x{cursor:pointer;color:#aaa;font-size:11px;padding:0 2px}
-.tag-input{border:none;outline:none;font-size:14px;color:#1a1a1a;background:transparent;min-width:80px;flex:1;font-family:inherit;padding:2px 0}
-.sky-row{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;background:#F5F4F0;border:0.5px solid rgba(0,0,0,0.08)}
-.sky-toggle{width:40px;height:24px;border-radius:12px;background:#ddd;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0}
-.sky-toggle.on{background:#D4537E}
-.sky-toggle::after{content:'';position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform 0.2s}
-.sky-toggle.on::after{transform:translateX(16px)}
-.score-input{width:64px;padding:8px 10px;border-radius:9px;border:0.5px solid rgba(0,0,0,0.15);font-size:15px;font-weight:500;color:#1a1a1a;text-align:center;font-family:inherit;outline:none;-webkit-appearance:none;background:#fff}
-.score-input:focus{border-color:#D4537E}
-.ai-btn{width:100%;padding:13px;border-radius:12px;border:1.5px dashed #85B7EB;background:#E6F1FB;color:#185FA5;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;-webkit-appearance:none}
-.ai-btn:active{background:#B5D4F4}
-.link-wrap{display:flex;gap:8px}
-.link-wrap .f-input{flex:1;min-width:0}
-.fetch-btn{padding:11px 16px;border-radius:11px;background:#D4537E;color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;flex-shrink:0;-webkit-appearance:none}
-.fetch-btn:active{background:#993556}
-.preview-box{background:#fff;border:0.5px solid rgba(0,0,0,0.08);border-radius:14px;overflow:hidden}
-.preview-hero{height:110px;display:flex;align-items:center;justify-content:center;font-size:46px}
-.preview-body{padding:12px 14px}
-.preview-name{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
-.preview-sub{font-size:11px;color:#aaa;margin-bottom:7px}
-.preview-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.preview-tag{font-size:11px;padding:2px 8px;border-radius:8px;background:#F5F4F0;color:#888;border:0.5px solid rgba(0,0,0,0.08)}
-.preview-desc{font-size:13px;color:#888;line-height:1.6;font-style:italic;border-left:2px solid #ED93B1;padding-left:10px}
-.submit-btn{width:100%;padding:15px;border-radius:14px;background:#D4537E;color:#fff;font-size:16px;font-weight:500;border:none;cursor:pointer;-webkit-appearance:none}
-.submit-btn:active{background:#993556;transform:scale(0.98)}
-.submit-btn:disabled{opacity:0.5;cursor:not-allowed}
-.success-banner{background:#EAF3DE;border:0.5px solid #97C459;border-radius:12px;padding:13px 14px;font-size:13px;color:#27500A;display:none;align-items:center;gap:8px}
+.a-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:400px){.a-row{grid-template-columns:1fr}}
+.a-group{display:flex;flex-direction:column;gap:4px}
+.a-label{font-size:11px;font-weight:500;color:#888;letter-spacing:0.3px;display:flex;align-items:center;gap:5px}
+.a-input{width:100%;padding:10px 12px;border-radius:10px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;font-size:14px;color:#1a1a1a;resize:vertical;font-family:inherit;outline:none;transition:border-color 0.2s}
+.a-input:focus{border-color:#D4537E}
+.a-input.ai-filled{border-color:#85B7EB;background:#E6F1FB}
+.a-input.ai-edited{border-color:#ED93B1;background:#FBEAF0}
+.a-select{width:100%;padding:10px 12px;border-radius:10px;border:0.5px solid rgba(0,0,0,0.12);background:#fff;font-size:14px;color:#1a1a1a;font-family:inherit;outline:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23aaa' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center}
+.a-select:focus{border-color:#D4537E}
+.sky-row-a{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:#F5F4F0;border:0.5px solid rgba(0,0,0,0.08)}
+.sky-toggle-a{width:38px;height:22px;border-radius:11px;background:#ddd;cursor:pointer;position:relative;transition:background 0.2s;flex-shrink:0}
+.sky-toggle-a.on{background:#D4537E}
+.sky-toggle-a::after{content:'';position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform 0.2s}
+.sky-toggle-a.on::after{transform:translateX(16px)}
+.score-a{width:60px;padding:7px 9px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.12);font-size:14px;font-weight:500;color:#1a1a1a;text-align:center;font-family:inherit;outline:none;background:#fff}
+.score-a:focus{border-color:#D4537E}
+.submit-btn-a{width:100%;padding:14px;border-radius:13px;background:#D4537E;color:#fff;font-size:15px;font-weight:500;border:none;cursor:pointer;margin-bottom:8px}
+.submit-btn-a:active{background:#993556;transform:scale(0.98)}
+.submit-btn-a:disabled{opacity:0.5;cursor:not-allowed}
+.success-banner{background:#EAF3DE;border:0.5px solid #97C459;border-radius:11px;padding:11px 13px;font-size:13px;color:#27500A;display:none;align-items:center;gap:7px}
 .success-banner.show{display:flex}
-.err-banner{background:#FCEBEB;border:0.5px solid #F09595;border-radius:12px;padding:13px 14px;font-size:13px;color:#A32D2D;display:none;align-items:center;gap:8px}
+.err-banner{background:#FCEBEB;border:0.5px solid #F09595;border-radius:11px;padding:11px 13px;font-size:13px;color:#A32D2D;display:none;align-items:center;gap:7px}
 .err-banner.show{display:flex}
-.divider{height:0.5px;background:rgba(0,0,0,0.08)}
+.divider{height:0.5px;background:rgba(0,0,0,0.07)}
 .section-hint{font-size:12px;color:#aaa;line-height:1.5}
-.gh-path{font-size:11px;color:#bbb;text-align:center;padding-bottom:24px}
+.empty-list{font-size:13px;color:#bbb;text-align:center;padding:40px 0;line-height:1.8}
+.gh-path{font-size:11px;color:#bbb;text-align:center;padding-bottom:4px}
+.global-success{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:12px 20px;border-radius:12px;font-size:13px;font-weight:500;z-index:300;display:none;animation:fadeIn 0.2s}
+.global-success.show{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateX(-50%) translateY(8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 </style>
 </head>
 <body>
@@ -169,147 +226,163 @@ body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;ba
     <div class="topbar-right">
       <div class="icon-btn" onclick="openSettings()"><div class="dot" id="ghDot"></div>GitHub</div>
       <div class="icon-btn" onclick="logout()">退出</div>
-      <button class="add-btn" onclick="openForm(null)">＋ 新增</button>
+      <button class="save-all-btn" id="saveAllBtn" onclick="saveAll()" disabled>保存全部更改</button>
+      <button class="add-btn" onclick="openAdd()">＋ 新增</button>
     </div>
   </div>
 
-  <div class="list-view" id="listView">
-    <div class="list-header">
-      <div class="list-title">所有地点</div>
-      <div class="list-count" id="listCount">0 个</div>
-    </div>
+  <div class="filters-bar">
     <div class="city-filter" id="cityFilter"></div>
-    <div class="list-hint">长按可拖拽排序</div>
-    <div id="placesList"></div>
+    <div class="count-badge" id="countBadge">0 个地点</div>
   </div>
 
-  <div class="form-view" id="formView">
-    <div class="form-topbar">
-      <button class="back-btn" onclick="closeForm()">← 返回</button>
-      <div class="form-title" id="formTitle">新增地点</div>
+  <div class="grid-area">
+    <div class="grid-header">
+      <span></span><span>图片</span><span>名称</span><span>城市 / 类别</span><span>Sky亲测</span><span>评分</span><span></span><span></span>
     </div>
-    <div class="mode-tabs" id="modeTabs">
-      <div class="mode-tab on" id="mTab0" onclick="switchMode(0)">截图识别</div>
-      <div class="mode-tab" id="mTab1" onclick="switchMode(1)">粘贴链接</div>
-      <div class="mode-tab" id="mTab2" onclick="switchMode(2)">手动填写</div>
-    </div>
-    <div class="form-body">
-      <div class="success-banner" id="successBanner"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#639922"/><path d="M5 8l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span id="successMsg">已保存！</span></div>
-      <div class="err-banner" id="errBanner"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#A32D2D" stroke-width="1.2"/><path d="M8 5v4M8 11h.01" stroke="#A32D2D" stroke-width="1.2" stroke-linecap="round"/></svg><span id="errMsg">保存失败</span></div>
-
-      <div id="modeUpload">
-        <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
-          <div class="upload-icon">📸</div>
-          <div class="upload-title">上传截图</div>
-          <div class="upload-sub">Yelp、Google Maps、大众点评截图</div>
-        </div>
-        <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleUpload(event)">
-        <div id="uploadedPreview" style="display:none;flex-direction:column;gap:10px;margin-top:12px">
-          <img id="uploadedImg" style="width:100%;border-radius:14px;max-height:220px;object-fit:cover">
-          <button class="ai-btn" id="aiBtn" onclick="aiRecognize()">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6" stroke-linecap="round"/></svg>
-            AI 识别地点信息
-          </button>
-        </div>
-      </div>
-      <div id="modePaste" style="display:none;flex-direction:column;gap:12px">
-        <div class="section-hint">粘贴 Yelp 或 Google Maps 链接，AI 自动抓取信息</div>
-        <div class="link-wrap">
-          <input class="f-input" id="linkInput" placeholder="https://yelp.com/biz/..." type="url" inputmode="url">
-          <button class="fetch-btn" id="fetchBtn" onclick="fetchLink()">抓取</button>
-        </div>
-      </div>
-      <div id="modeManual" style="display:none"><div class="section-hint">直接填写地点信息</div></div>
-
-      <div class="divider"></div>
-
-      <div class="f-row">
-        <div class="f-group"><div class="f-label">英文名称 *</div><input class="f-input" id="fNameEn" placeholder="e.g. Tartine Bakery" oninput="updatePreview()" autocomplete="off"></div>
-        <div class="f-group"><div class="f-label">中文名称</div><input class="f-input" id="fNameZh" placeholder="e.g. 塔汀面包坊" oninput="updatePreview()" autocomplete="off"></div>
-      </div>
-      <div class="f-row">
-        <div class="f-group"><div class="f-label">城市</div>
-          <select class="f-select" id="fCity">
-            <option value="bayarea">旧金山湾区</option><option value="la">洛杉矶</option><option value="shanghai">上海</option><option value="guangzhou">广州</option><option value="nanjing">南京</option>
-          </select>
-        </div>
-        <div class="f-group"><div class="f-label">类别</div>
-          <select class="f-select" id="fCat" onchange="updatePreview()">
-            <option value="eat">吃起来</option><option value="drink">喝起来</option><option value="visit">玩起来</option><option value="stay">住哪里</option><option value="buy">买买买</option>
-          </select>
-        </div>
-      </div>
-      <div class="f-group"><div class="f-label">英文地址 <span class="ai-chip" id="addrEnChip" style="display:none">AI</span></div><input class="f-input" id="fAddrEn" placeholder="e.g. 600 Guerrero St, San Francisco, CA"></div>
-      <div class="f-group"><div class="f-label">中文地址 <span class="ai-chip" id="addrZhChip" style="display:none">AI</span></div><input class="f-input" id="fAddrZh" placeholder="e.g. 上海市静安区常德路1号"></div>
-      <div class="f-row">
-        <div class="f-group"><div class="f-label">Yelp 链接</div><input class="f-input" id="fYelp" placeholder="https://yelp.com/biz/..." type="url" inputmode="url"></div>
-        <div class="f-group"><div class="f-label">Google / 大众点评</div><input class="f-input" id="fGoogle" placeholder="https://maps.google.com/..." type="url" inputmode="url"></div>
-      </div>
-      <div class="f-row">
-        <div class="f-group"><div class="f-label">Apple Maps</div><input class="f-input" id="fApple" placeholder="https://maps.apple.com/..." type="url" inputmode="url"></div>
-        <div class="f-group"><div class="f-label">高德地图</div><input class="f-input" id="fAmap" placeholder="https://uri.amap.com/..." type="url" inputmode="url"></div>
-      </div>
-      <div class="f-group"><div class="f-label">大众点评</div><input class="f-input" id="fDianping" placeholder="https://www.dianping.com/..." type="url" inputmode="url"></div>
-      <div class="f-group"><div class="f-label">Emoji</div><input class="f-input" id="fEmoji" placeholder="🍜" style="width:68px;font-size:22px;text-align:center" oninput="updatePreview()" maxlength="2"></div>
-      <div class="f-group">
-        <div class="f-label">标签 <span class="ai-chip" id="tagsChip" style="display:none">AI</span></div>
-        <div class="tags-editor" id="tagsEditor" onclick="document.getElementById('tagInput').focus()">
-          <input class="tag-input" id="tagInput" placeholder="输入标签，回车添加" onkeydown="handleTagKey(event)">
-        </div>
-      </div>
-      <div class="f-group">
-        <div class="f-label">描述（英文）<span class="ai-chip" id="descEnChip" style="display:none">AI</span><span class="edited-chip" id="descEnEdited" style="display:none">已编辑</span></div>
-        <textarea class="f-input" id="fDescEn" rows="3" placeholder="A few sentences about why you love this place..." oninput="onDescEdit('en')"></textarea>
-      </div>
-      <div class="f-group">
-        <div class="f-label">描述（中文）<span class="ai-chip" id="descZhChip" style="display:none">AI</span><span class="edited-chip" id="descZhEdited" style="display:none">已编辑</span></div>
-        <textarea class="f-input" id="fDescZh" rows="3" placeholder="几句话说说为什么喜欢…" oninput="onDescEdit('zh')"></textarea>
-      </div>
-      <div class="sky-row">
-        <div style="flex:1"><div style="font-size:14px;font-weight:500;color:#1a1a1a">Sky 亲测</div><div style="font-size:11px;color:#aaa">亲自去过才打开</div></div>
-        <div class="sky-toggle" id="skyToggle" onclick="toggleSky()"></div>
-        <input class="score-input" id="fScore" type="number" min="0.1" max="5.0" step="0.1" value="4.5" inputmode="decimal">
-      </div>
-      <div id="previewSection" style="display:none;flex-direction:column;gap:8px">
-        <div class="f-label">预览</div>
-        <div class="preview-box">
-          <div class="preview-hero" id="previewHero">🍜</div>
-          <div class="preview-body">
-            <div class="preview-name" id="previewName">地点名称</div>
-            <div class="preview-sub" id="previewSub">城市 · 类别</div>
-            <div class="preview-tags" id="previewTags"></div>
-            <div class="preview-desc" id="previewDesc">描述...</div>
-          </div>
-        </div>
-      </div>
-      <button class="submit-btn" id="submitBtn" onclick="submitPlace()">保存到 GitHub</button>
-      <div class="gh-path" id="ghPathHint">请先配置 GitHub</div>
-    </div>
+    <div id="placesList"></div>
   </div>
 </div>
 
-<div class="settings-modal" id="settingsModal" onclick="closeSettingsOutside(event)">
+<!-- SETTINGS -->
+<div class="settings-modal" id="settingsModal" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="settings-sheet">
     <div class="settings-handle"></div>
     <div class="settings-title">GitHub 配置</div>
     <div class="settings-hint">
-      1. 新建 Public GitHub repo，建议命名 <strong>skys-guide-data</strong><br>
+      1. 新建 Public GitHub repo，建议命名 <strong>skysguide</strong><br>
       2. repo 里创建 <strong>places.json</strong>，内容填 <code>[]</code><br>
       3. <a href="https://github.com/settings/tokens" target="_blank">Personal Access Tokens (classic)</a> → 勾选 repo 权限
     </div>
-    <div class="s-field"><div class="s-label">GitHub Username</div><input class="s-input" id="ghUser" placeholder="e.g. skyzhang" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
-    <div class="s-field"><div class="s-label">Repo 名称</div><input class="s-input" id="ghRepo" placeholder="skys-guide-data" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
+    <div class="s-field"><div class="s-label">GitHub Username</div><input class="s-input" id="ghUser" placeholder="e.g. skyzhangtianyi" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
+    <div class="s-field"><div class="s-label">Repo 名称</div><input class="s-input" id="ghRepo" placeholder="skysguide" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
     <div class="s-field"><div class="s-label">Personal Access Token</div><input class="s-input" id="ghToken" type="password" placeholder="ghp_xxxxxxxxxxxxxxxx" autocomplete="off"></div>
     <button class="settings-save" onclick="saveSettings()">保存并测试连接</button>
     <div class="gh-banner" id="ghBanner"></div>
   </div>
 </div>
 
+<!-- ADD MODAL -->
+<div class="add-modal" id="addModal" onclick="if(event.target===this)closeAdd()">
+  <div class="add-sheet">
+    <div class="add-topbar">
+      <div class="add-title" id="addTitle">新增地点</div>
+      <div class="close-btn" onclick="closeAdd()">✕</div>
+    </div>
+    <div class="mode-tabs" id="addModeTabs">
+      <div class="mode-tab on" id="aTab0" onclick="switchAddMode(0)">截图识别</div>
+      <div class="mode-tab" id="aTab1" onclick="switchAddMode(1)">粘贴链接</div>
+      <div class="mode-tab" id="aTab2" onclick="switchAddMode(2)">手动填写</div>
+    </div>
+    <div class="add-body">
+      <div class="success-banner" id="addSuccess"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#639922"/><path d="M5 8l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg><span id="addSuccessMsg">已保存！</span></div>
+      <div class="err-banner" id="addErr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#A32D2D" stroke-width="1.2"/><path d="M8 5v4M8 11h.01" stroke="#A32D2D" stroke-width="1.2" stroke-linecap="round"/></svg><span id="addErrMsg">保存失败</span></div>
+
+      <div id="aModeUpload">
+        <div class="upload-zone" onclick="document.getElementById('aFileInput').click()">
+          <div class="upload-icon">📸</div>
+          <div class="upload-title">上传截图</div>
+          <div class="upload-sub">Yelp、Google Maps、大众点评截图</div>
+        </div>
+        <input type="file" id="aFileInput" accept="image/*" style="display:none" onchange="handleAddUpload(event)">
+        <div id="aUploadedPreview" style="display:none;flex-direction:column;gap:8px;margin-top:10px">
+          <img id="aUploadedImg" style="width:100%;border-radius:12px;max-height:200px;object-fit:cover">
+          <button class="ai-btn-sm" id="aAiBtn" onclick="aiRecognizeAdd()">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6" stroke-linecap="round"/></svg>
+            AI 识别地点信息
+          </button>
+        </div>
+      </div>
+
+      <div id="aModePaste" style="display:none;flex-direction:column;gap:10px">
+        <div class="section-hint">粘贴 Yelp 或 Google Maps 链接，AI 自动抓取</div>
+        <div class="link-wrap-sm">
+          <input class="a-input" id="aLinkInput" placeholder="https://yelp.com/biz/..." type="url" inputmode="url">
+          <button class="fetch-btn-sm" id="aFetchBtn" onclick="fetchLinkAdd()">抓取</button>
+        </div>
+      </div>
+
+      <div id="aModeManual" style="display:none"><div class="section-hint">直接填写地点信息</div></div>
+
+      <div class="divider"></div>
+
+      <div class="a-group">
+        <div class="a-label">地点图片</div>
+        <div class="img-upload-area" id="aImgArea" onclick="document.getElementById('aImgInput').click()">
+          <div class="upload-icon">🖼</div>
+          <div class="img-upload-text">点击上传图片</div>
+          <div class="img-upload-sub">支持 JPG、PNG，建议正方形</div>
+          <div class="img-progress" id="aImgProgress">
+            <div class="progress-bar"><div class="progress-fill" id="aProgressFill" style="width:0%"></div></div>
+            <span style="font-size:11px;color:#888">上传中...</span>
+          </div>
+        </div>
+        <input type="file" id="aImgInput" accept="image/*" style="display:none" onchange="uploadImageAdd(event)">
+        <input class="a-input" id="aImgUrl" placeholder="或直接填图片 URL" style="margin-top:6px" oninput="previewAddImg()">
+      </div>
+
+      <div class="a-row">
+        <div class="a-group"><div class="a-label">英文名称 *</div><input class="a-input" id="aNameEn" placeholder="e.g. Tartine Bakery" autocomplete="off"></div>
+        <div class="a-group"><div class="a-label">中文名称</div><input class="a-input" id="aNameZh" placeholder="e.g. 塔汀面包坊" autocomplete="off"></div>
+      </div>
+      <div class="a-row">
+        <div class="a-group"><div class="a-label">城市</div>
+          <select class="a-select" id="aCity">
+            <option value="bayarea">旧金山湾区</option><option value="la">洛杉矶</option><option value="shanghai">上海</option><option value="guangzhou">广州</option><option value="nanjing">南京</option>
+          </select>
+        </div>
+        <div class="a-group"><div class="a-label">类别</div>
+          <select class="a-select" id="aCat">
+            <option value="eat">吃起来</option><option value="drink">喝起来</option><option value="visit">玩起来</option><option value="stay">住哪里</option><option value="buy">买买买</option>
+          </select>
+        </div>
+      </div>
+      <div class="a-group"><div class="a-label">Emoji（无图片时显示）</div><input class="a-input" id="aEmoji" placeholder="🍜" style="width:60px;font-size:20px;text-align:center" maxlength="2"></div>
+      <div class="a-group"><div class="a-label">英文地址 <span class="ai-chip" id="aAddrEnChip" style="display:none">AI</span></div><input class="a-input" id="aAddrEn" placeholder="e.g. 600 Guerrero St, San Francisco, CA"></div>
+      <div class="a-group"><div class="a-label">中文地址 <span class="ai-chip" id="aAddrZhChip" style="display:none">AI</span></div><input class="a-input" id="aAddrZh" placeholder="e.g. 上海市静安区常德路1号"></div>
+      <div class="a-row">
+        <div class="a-group"><div class="a-label">Yelp</div><input class="a-input" id="aYelp" placeholder="https://yelp.com/biz/..." type="url" inputmode="url"></div>
+        <div class="a-group"><div class="a-label">Google / 大众点评</div><input class="a-input" id="aGoogle" placeholder="https://maps.google.com/..." type="url" inputmode="url"></div>
+      </div>
+      <div class="a-row">
+        <div class="a-group"><div class="a-label">Apple Maps</div><input class="a-input" id="aApple" placeholder="https://maps.apple.com/..." type="url" inputmode="url"></div>
+        <div class="a-group"><div class="a-label">高德地图</div><input class="a-input" id="aAmap" placeholder="https://uri.amap.com/..." type="url" inputmode="url"></div>
+      </div>
+      <div class="a-group"><div class="a-label">大众点评</div><input class="a-input" id="aDianping" placeholder="https://www.dianping.com/..." type="url" inputmode="url"></div>
+      <div class="a-group">
+        <div class="a-label">标签 <span class="ai-chip" id="aTagsChip" style="display:none">AI</span></div>
+        <div class="tags-editor" id="aTagsEditor" onclick="document.getElementById('aTagInput').focus()">
+          <input class="tag-inp" id="aTagInput" placeholder="输入标签，回车添加" onkeydown="handleAddTagKey(event)">
+        </div>
+      </div>
+      <div class="a-group">
+        <div class="a-label">描述（英文）<span class="ai-chip" id="aDescEnChip" style="display:none">AI</span><span class="edited-chip" id="aDescEnEdited" style="display:none">已编辑</span></div>
+        <textarea class="a-input" id="aDescEn" rows="3" placeholder="A few sentences about why you love this place..." oninput="onAddDescEdit('en')"></textarea>
+      </div>
+      <div class="a-group">
+        <div class="a-label">描述（中文）<span class="ai-chip" id="aDescZhChip" style="display:none">AI</span><span class="edited-chip" id="aDescZhEdited" style="display:none">已编辑</span></div>
+        <textarea class="a-input" id="aDescZh" rows="3" placeholder="几句话说说为什么喜欢…" oninput="onAddDescEdit('zh')"></textarea>
+      </div>
+      <div class="sky-row-a">
+        <div style="flex:1"><div style="font-size:14px;font-weight:500;color:#1a1a1a">Sky 亲测</div><div style="font-size:11px;color:#aaa">亲自去过才打开</div></div>
+        <div class="sky-toggle-a" id="aSkyToggle" onclick="toggleAddSky()"></div>
+        <input class="score-a" id="aScore" type="number" min="0.1" max="5.0" step="0.1" value="4.5" inputmode="decimal">
+      </div>
+      <button class="submit-btn-a" id="aSubmitBtn" onclick="submitAdd()">保存到 GitHub</button>
+      <div class="gh-path" id="aGhHint">请先配置 GitHub</div>
+    </div>
+  </div>
+</div>
+
+<div class="global-success" id="globalSuccess"></div>
+
 </div>
 
 <script>
-// ← 改这里设置你的 PIN
+// ← 改这里
 const ADMIN_PIN = '1234';
+const CLOUDINARY_CLOUD = 'dgh1jmwtb';
+const CLOUDINARY_PRESET = 'skysguide';
 
 const CAT_EMOJI={eat:'🍜',drink:'🍸',visit:'🗺',stay:'🛎',buy:'🛍'};
 const CAT_BG={eat:'#FFF1E6',drink:'#F0EDF8',visit:'#E8F0FB',stay:'#FDF0F5',buy:'#EDF8F0'};
@@ -319,10 +392,11 @@ const ALL_CITIES=['all','bayarea','la','shanghai','guangzhou','nanjing'];
 const CITY_NAME={all:'全部',bayarea:'湾区',la:'洛杉矶',shanghai:'上海',guangzhou:'广州',nanjing:'南京'};
 
 let ghConfig={user:'',repo:'',token:''};
-let placesCache=[], fileSha='';
-let editingId=null, skyOn=false, tags=[], descEnAI=false, descZhAI=false, descEnDirty=false, descZhDirty=false;
-let dragSrc=null, filterCity='all';
+let placesCache=[], fileSha='', dirtyIds=new Set();
+let filterCity='all', dragSrc=null;
+let addSkyOn=false, addTags=[], addDescEnAI=false, addDescZhAI=false, addDescEnDirty=false, addDescZhDirty=false;
 
+// PIN
 function onPinInput(){
   document.getElementById('pinInput').classList.remove('error');
   document.getElementById('pinErr').textContent='';
@@ -331,7 +405,8 @@ function onPinInput(){
 function checkPin(){
   if(document.getElementById('pinInput').value===ADMIN_PIN){
     document.getElementById('loginScreen').style.display='none';
-    document.getElementById('mainScreen').style.display='block';
+    const ms=document.getElementById('mainScreen');
+    ms.style.display='flex';ms.style.flexDirection='column';
     loadSettings();
   } else {
     const el=document.getElementById('pinInput');
@@ -346,6 +421,7 @@ function logout(){
   document.getElementById('loginScreen').style.display='flex';
 }
 
+// GITHUB
 function loadSettings(){
   try{
     const s=localStorage.getItem('skysguide_gh');
@@ -354,14 +430,11 @@ function loadSettings(){
       document.getElementById('ghUser').value=ghConfig.user||'';
       document.getElementById('ghRepo').value=ghConfig.repo||'';
       document.getElementById('ghToken').value=ghConfig.token||'';
-      if(ghConfig.user&&ghConfig.repo&&ghConfig.token){
-        setDot('ok'); updateGhHint(); fetchPlaces();
-      }
+      if(ghConfig.user&&ghConfig.repo&&ghConfig.token){setDot('ok');updateGhHint();fetchPlaces();}
     }
   }catch(e){}
 }
 function openSettings(){document.getElementById('settingsModal').classList.add('open');}
-function closeSettingsOutside(e){if(e.target===document.getElementById('settingsModal'))document.getElementById('settingsModal').classList.remove('open');}
 async function saveSettings(){
   const u=document.getElementById('ghUser').value.trim();
   const r=document.getElementById('ghRepo').value.trim();
@@ -370,19 +443,19 @@ async function saveSettings(){
   showGhBanner('loading','测试连接中...');
   try{
     const res=await fetch(`https://api.github.com/repos/${u}/${r}/contents/places.json`,{headers:{Authorization:`Bearer ${t}`,Accept:'application/vnd.github+json'}});
-    if(res.status===404){showGhBanner('err','找不到 places.json，请先在 repo 里创建');return;}
+    if(res.status===404){showGhBanner('err','找不到 places.json，请先创建');return;}
     if(!res.ok){showGhBanner('err',`连接失败 (${res.status})`);return;}
     ghConfig={user:u,repo:r,token:t};
     localStorage.setItem('skysguide_gh',JSON.stringify(ghConfig));
-    setDot('ok'); updateGhHint();
+    setDot('ok');updateGhHint();
     showGhBanner('ok',`连接成功！${u}/${r}`);
     fetchPlaces();
     setTimeout(()=>document.getElementById('settingsModal').classList.remove('open'),1500);
-  }catch(e){showGhBanner('err','网络错误，请重试');}
+  }catch(e){showGhBanner('err','网络错误');}
 }
-function showGhBanner(type,msg){const b=document.getElementById('ghBanner');b.style.display='flex';b.className='gh-banner '+type;b.textContent=msg;}
-function setDot(type){document.getElementById('ghDot').className='dot '+(type==='ok'?'ok':'err');}
-function updateGhHint(){document.getElementById('ghPathHint').textContent=`写入 ${ghConfig.user}/${ghConfig.repo}/places.json`;}
+function showGhBanner(type,msg){const b=document.getElementById('ghBanner');b.className='gh-banner '+type;b.textContent=msg;}
+function setDot(t){document.getElementById('ghDot').className='dot '+(t==='ok'?'ok':'err');}
+function updateGhHint(){document.getElementById('aGhHint').textContent=`写入 ${ghConfig.user}/${ghConfig.repo}/places.json`;}
 
 async function fetchPlaces(){
   if(!ghConfig.token)return;
@@ -390,12 +463,23 @@ async function fetchPlaces(){
     const res=await fetch(`https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/places.json`,{headers:{Authorization:`Bearer ${ghConfig.token}`,Accept:'application/vnd.github+json'}});
     const data=await res.json();
     fileSha=data.sha;
-    placesCache=JSON.parse(atob(data.content.replace(/\n/g,'')));
+    // 乱码修复：用 TextDecoder 解码
+    const raw=atob(data.content.replace(/\n/g,''));
+    const bytes=new Uint8Array(raw.length);
+    for(let i=0;i<raw.length;i++) bytes[i]=raw.charCodeAt(i);
+    placesCache=JSON.parse(new TextDecoder('utf-8').decode(bytes));
+    dirtyIds.clear();
+    updateSaveBtn();
     renderList();
   }catch(e){console.log('fetch err',e);}
 }
+
 async function writePlaces(places,msg){
-  const content=btoa(unescape(encodeURIComponent(JSON.stringify(places,null,2))));
+  const json=JSON.stringify(places,null,2);
+  const bytes=new TextEncoder().encode(json);
+  let binary='';
+  bytes.forEach(b=>binary+=String.fromCharCode(b));
+  const content=btoa(binary);
   const res=await fetch(`https://api.github.com/repos/${ghConfig.user}/${ghConfig.repo}/contents/places.json`,{
     method:'PUT',
     headers:{Authorization:`Bearer ${ghConfig.token}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},
@@ -406,223 +490,430 @@ async function writePlaces(places,msg){
   fileSha=data.content.sha;
 }
 
-function renderCityFilter(){
-  document.getElementById('cityFilter').innerHTML=ALL_CITIES.map(c=>`<div class="cf-btn${filterCity===c?' on':''}" onclick="setFilterCity('${c}')">${CITY_NAME[c]}</div>`).join('');
+// CLOUDINARY UPLOAD
+async function uploadToCloudinary(file, onProgress){
+  const formData=new FormData();
+  formData.append('file',file);
+  formData.append('upload_preset',CLOUDINARY_PRESET);
+  return new Promise((resolve,reject)=>{
+    const xhr=new XMLHttpRequest();
+    xhr.open('POST',`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`);
+    xhr.upload.onprogress=e=>{if(e.lengthComputable&&onProgress)onProgress(Math.round(e.loaded/e.total*100));};
+    xhr.onload=()=>{
+      if(xhr.status===200){const d=JSON.parse(xhr.responseText);resolve(d.secure_url);}
+      else reject(new Error('Upload failed'));
+    };
+    xhr.onerror=()=>reject(new Error('Network error'));
+    xhr.send(formData);
+  });
 }
-function setFilterCity(c){filterCity=c;renderCityFilter();renderList();}
+
+// LIST RENDER
+function renderCityFilter(){
+  document.getElementById('cityFilter').innerHTML=ALL_CITIES.map(c=>`<div class="cf-btn${filterCity===c?' on':''}" onclick="setFilter('${c}')">${CITY_NAME[c]}</div>`).join('');
+}
+function setFilter(c){filterCity=c;renderCityFilter();renderList();}
+function updateSaveBtn(){
+  const btn=document.getElementById('saveAllBtn');
+  btn.disabled=dirtyIds.size===0;
+  btn.textContent=dirtyIds.size>0?`保存全部更改 (${dirtyIds.size})`:'保存全部更改';
+}
 
 function renderList(){
   renderCityFilter();
   const filtered=filterCity==='all'?placesCache:placesCache.filter(p=>p.city===filterCity);
-  document.getElementById('listCount').textContent=`${placesCache.length} 个`;
+  document.getElementById('countBadge').textContent=`${placesCache.length} 个地点`;
   const el=document.getElementById('placesList');
   if(!placesCache.length){el.innerHTML='<div class="empty-list">还没有地点<br>点右上角 ＋ 新增</div>';return;}
   if(!filtered.length){el.innerHTML='<div class="empty-list">这个城市还没有地点</div>';return;}
   el.innerHTML=filtered.map(p=>{
     const ri=placesCache.indexOf(p);
-    return `<div class="place-row" draggable="true" data-idx="${ri}"
+    const imgSrc=p.image_url||'';
+    const isDirty=dirtyIds.has(p.id);
+    return `<div class="place-card${isDirty?' dirty':''}" id="card-${p.id}" draggable="true"
       ondragstart="dragStart(event,${ri})" ondragover="dragOver(event,${ri})" ondrop="dragDrop(event,${ri})" ondragend="dragEnd()">
-      <div class="drag-handle">⠿</div>
-      <div class="place-emoji">${p.emoji||'📍'}</div>
-      <div class="place-info">
-        <div class="place-name">${p.name_en||p.name_zh||'未命名'}</div>
-        <div class="place-meta">
-          <span>${CITY_L[p.city]||p.city}</span><span>·</span><span>${CAT_L[p.cat]||p.cat}</span>
-          ${p.sky?`<span class="sky-pill">★ ${parseFloat(p.score||0).toFixed(1)}</span>`:''}
+      <div class="card-row" onclick="toggleExpand(${p.id})">
+        <div class="drag-handle" onclick="event.stopPropagation()">⠿</div>
+        <div class="card-img-wrap" onclick="event.stopPropagation();triggerCardImg(${p.id})">
+          ${imgSrc?`<img src="${imgSrc}" alt="">`:p.emoji||'📍'}
+          <div class="img-overlay">换图</div>
+        </div>
+        <div class="card-names">
+          <div class="name-en">${p.name_en||'—'}</div>
+          <div class="name-zh">${p.name_zh||''}</div>
+        </div>
+        <div class="badge-row">
+          <span class="city-badge">${CITY_L[p.city]||p.city}</span>
+          <span class="cat-badge cat-${p.cat}">${CAT_L[p.cat]||p.cat}</span>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <div class="sky-toggle-sm${p.sky?' on':''}" id="sky-${p.id}" onclick="toggleCardSky(${p.id})"></div>
+        </div>
+        <div onclick="event.stopPropagation()">
+          <input class="score-sm" type="number" min="0.1" max="5.0" step="0.1" value="${parseFloat(p.score||0).toFixed(1)}"
+            oninput="onCardScoreChange(${p.id},this.value)" inputmode="decimal">
+        </div>
+        <div class="row-actions" onclick="event.stopPropagation()">
+          <div class="edit-btn-sm" onclick="toggleExpand(${p.id})">编辑 ▾</div>
+        </div>
+        <div class="row-actions" onclick="event.stopPropagation()">
+          <div class="del-btn-sm" onclick="deletePlace(${ri})">删除</div>
         </div>
       </div>
-      <div class="row-actions">
-        <div class="edit-btn" onclick="openForm(${ri})">编辑</div>
-        <div class="del-btn" onclick="deletePlace(${ri})">删</div>
+      <input type="file" id="imgFile-${p.id}" accept="image/*" style="display:none" onchange="uploadCardImg(event,${p.id})">
+      <div class="card-expand" id="expand-${p.id}">
+        <div class="expand-grid">
+          <div class="e-group"><div class="e-label">英文名称</div><input class="e-input" value="${esc(p.name_en)}" oninput="onCardChange(${p.id},'name_en',this.value)"></div>
+          <div class="e-group"><div class="e-label">中文名称</div><input class="e-input" value="${esc(p.name_zh)}" oninput="onCardChange(${p.id},'name_zh',this.value)"></div>
+          <div class="e-group"><div class="e-label">城市</div>
+            <select class="e-select" onchange="onCardChange(${p.id},'city',this.value)">
+              ${['bayarea','la','shanghai','guangzhou','nanjing'].map(c=>`<option value="${c}"${p.city===c?' selected':''}>${CITY_NAME[c]}</option>`).join('')}
+            </select>
+          </div>
+          <div class="e-group"><div class="e-label">类别</div>
+            <select class="e-select" onchange="onCardChange(${p.id},'cat',this.value)">
+              ${['eat','drink','visit','stay','buy'].map(c=>`<option value="${c}"${p.cat===c?' selected':''}>${CAT_L[c]}</option>`).join('')}
+            </select>
+          </div>
+          <div class="e-group"><div class="e-label">英文地址</div><input class="e-input" value="${esc(p.addr_en)}" oninput="onCardChange(${p.id},'addr_en',this.value)"></div>
+          <div class="e-group"><div class="e-label">中文地址</div><input class="e-input" value="${esc(p.addr_zh)}" oninput="onCardChange(${p.id},'addr_zh',this.value)"></div>
+          <div class="e-group"><div class="e-label">Yelp</div><input class="e-input" value="${esc(p.yelp)}" oninput="onCardChange(${p.id},'yelp',this.value)" type="url"></div>
+          <div class="e-group"><div class="e-label">Google / 大众点评</div><input class="e-input" value="${esc(p.google_page)}" oninput="onCardChange(${p.id},'google_page',this.value);onCardChange(${p.id},'gmaps',this.value)" type="url"></div>
+          <div class="e-group"><div class="e-label">Apple Maps</div><input class="e-input" value="${esc(p.apple)}" oninput="onCardChange(${p.id},'apple',this.value)" type="url"></div>
+          <div class="e-group"><div class="e-label">高德地图</div><input class="e-input" value="${esc(p.amap)}" oninput="onCardChange(${p.id},'amap',this.value)" type="url"></div>
+          <div class="e-group" style="grid-column:1/-1"><div class="e-label">大众点评</div><input class="e-input" value="${esc(p.dianping)}" oninput="onCardChange(${p.id},'dianping',this.value)" type="url"></div>
+          <div class="e-group" style="grid-column:1/-1">
+            <div class="e-label">标签</div>
+            <div class="tags-editor" id="tags-${p.id}" onclick="document.getElementById('taginp-${p.id}').focus()">
+              ${(p.tags_en||[]).map((t,i)=>`<div class="tag-pill">${esc(t)}<span class="tag-x" onclick="removeCardTag(${p.id},${i})">✕</span></div>`).join('')}
+              <input class="tag-inp" id="taginp-${p.id}" placeholder="回车添加" onkeydown="addCardTag(event,${p.id})">
+            </div>
+          </div>
+          <div class="e-group" style="grid-column:1/-1">
+            <div class="e-label">描述（英文）<span class="edited-chip"${p.desc_en_edited?'':' style="display:none"'} id="deEn-${p.id}">已编辑</span></div>
+            <textarea class="e-input${p.desc_en_edited?' ai-edited':''}" rows="3" oninput="onCardDescEdit(${p.id},'en',this.value)">${esc(p.desc_en)}</textarea>
+          </div>
+          <div class="e-group" style="grid-column:1/-1">
+            <div class="e-label">描述（中文）<span class="edited-chip"${p.desc_zh_edited?'':' style="display:none"'} id="deZh-${p.id}">已编辑</span></div>
+            <textarea class="e-input${p.desc_zh_edited?' ai-edited':''}" rows="3" oninput="onCardDescEdit(${p.id},'zh',this.value)">${esc(p.desc_zh)}</textarea>
+          </div>
+        </div>
+        <div class="expand-footer">
+          <button class="cancel-btn" onclick="cancelCard(${p.id})">取消</button>
+          <button class="save-card-btn" onclick="saveCard(${p.id})">保存这条</button>
+        </div>
       </div>
     </div>`;
   }).join('');
 }
 
-function dragStart(e,i){dragSrc=i;setTimeout(()=>document.querySelector(`[data-idx="${i}"]`)?.classList.add('dragging'),0);}
-function dragOver(e,i){e.preventDefault();document.querySelectorAll('.place-row').forEach(r=>r.classList.remove('drag-over'));if(dragSrc!==i)document.querySelector(`[data-idx="${i}"]`)?.classList.add('drag-over');}
-function dragDrop(e,i){e.preventDefault();if(dragSrc===null||dragSrc===i)return;const a=[...placesCache];const[m]=a.splice(dragSrc,1);a.splice(i,0,m);placesCache=a;dragSrc=null;renderList();writePlaces(placesCache,'Reorder places').catch(console.log);}
-function dragEnd(){document.querySelectorAll('.place-row').forEach(r=>{r.classList.remove('dragging','drag-over');});dragSrc=null;}
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function toggleExpand(id){
+  const el=document.getElementById(`expand-${id}`);
+  el.classList.toggle('open');
+}
+
+function onCardChange(id,field,val){
+  const p=placesCache.find(x=>x.id===id);
+  if(!p)return;
+  p[field]=val;
+  dirtyIds.add(id);
+  document.getElementById(`card-${id}`)?.classList.add('dirty');
+  updateSaveBtn();
+}
+function onCardDescEdit(id,lang,val){
+  const p=placesCache.find(x=>x.id===id);
+  if(!p)return;
+  if(lang==='en'){p.desc_en=val;p.desc_en_edited=true;document.getElementById(`deEn-${id}`)?.style&&(document.getElementById(`deEn-${id}`).style.display='');}
+  if(lang==='zh'){p.desc_zh=val;p.desc_zh_edited=true;document.getElementById(`deZh-${id}`)?.style&&(document.getElementById(`deZh-${id}`).style.display='');}
+  dirtyIds.add(id);
+  document.getElementById(`card-${id}`)?.classList.add('dirty');
+  updateSaveBtn();
+}
+function toggleCardSky(id){
+  const p=placesCache.find(x=>x.id===id);
+  if(!p)return;
+  p.sky=!p.sky;
+  document.getElementById(`sky-${id}`).className='sky-toggle-sm'+(p.sky?' on':'');
+  dirtyIds.add(id);
+  document.getElementById(`card-${id}`)?.classList.add('dirty');
+  updateSaveBtn();
+}
+function onCardScoreChange(id,val){
+  const p=placesCache.find(x=>x.id===id);
+  if(!p)return;
+  p.score=parseFloat(val)||4.5;
+  dirtyIds.add(id);
+  document.getElementById(`card-${id}`)?.classList.add('dirty');
+  updateSaveBtn();
+}
+function addCardTag(e,id){
+  if((e.key==='Enter'||e.key===',')&&e.target.value.trim()){
+    e.preventDefault();
+    const p=placesCache.find(x=>x.id===id);
+    if(!p)return;
+    if(!p.tags_en)p.tags_en=[];
+    p.tags_en.push(e.target.value.trim());
+    p.tags_zh=p.tags_en;
+    e.target.value='';
+    dirtyIds.add(id);
+    document.getElementById(`card-${id}`)?.classList.add('dirty');
+    updateSaveBtn();
+    const editor=document.getElementById(`tags-${id}`);
+    const inp=document.getElementById(`taginp-${id}`);
+    const pill=document.createElement('div');
+    pill.className='tag-pill';
+    const idx=p.tags_en.length-1;
+    pill.innerHTML=`${esc(p.tags_en[idx])}<span class="tag-x" onclick="removeCardTag(${id},${idx})">✕</span>`;
+    editor.insertBefore(pill,inp);
+  }
+}
+function removeCardTag(id,i){
+  const p=placesCache.find(x=>x.id===id);
+  if(!p||!p.tags_en)return;
+  p.tags_en.splice(i,1);
+  p.tags_zh=p.tags_en;
+  dirtyIds.add(id);
+  document.getElementById(`card-${id}`)?.classList.add('dirty');
+  updateSaveBtn();
+  renderList();
+  document.getElementById(`expand-${id}`)?.classList.add('open');
+}
+
+function triggerCardImg(id){document.getElementById(`imgFile-${id}`)?.click();}
+async function uploadCardImg(e,id){
+  const file=e.target.files[0];if(!file)return;
+  const p=placesCache.find(x=>x.id===id);if(!p)return;
+  try{
+    const url=await uploadToCloudinary(file,pct=>{});
+    p.image_url=url;
+    dirtyIds.add(id);
+    document.getElementById(`card-${id}`)?.classList.add('dirty');
+    updateSaveBtn();
+    renderList();
+    document.getElementById(`expand-${id}`)?.classList.add('open');
+    showGlobalSuccess('图片上传成功！');
+  }catch(err){alert('图片上传失败：'+err.message);}
+}
+
+async function saveCard(id){
+  if(!ghConfig.token){alert('请先配置 GitHub');return;}
+  const btn=document.querySelector(`#card-${id} .save-card-btn`);
+  if(btn){btn.textContent='保存中...';btn.disabled=true;}
+  try{
+    await writePlaces(placesCache,`Edit place ${id}`);
+    dirtyIds.delete(id);
+    document.getElementById(`card-${id}`)?.classList.remove('dirty');
+    updateSaveBtn();
+    document.getElementById(`expand-${id}`)?.classList.remove('open');
+    showGlobalSuccess('已保存！');
+  }catch(err){alert('保存失败：'+err.message);}
+  if(btn){btn.textContent='保存这条';btn.disabled=false;}
+}
+function cancelCard(id){
+  document.getElementById(`expand-${id}`)?.classList.remove('open');
+  if(dirtyIds.has(id)){fetchPlaces();}
+}
+async function saveAll(){
+  if(!ghConfig.token){alert('请先配置 GitHub');return;}
+  const btn=document.getElementById('saveAllBtn');
+  btn.textContent='保存中...';btn.disabled=true;
+  try{
+    await writePlaces(placesCache,'Batch update via Admin');
+    dirtyIds.clear();
+    updateSaveBtn();
+    document.querySelectorAll('.place-card.dirty').forEach(el=>el.classList.remove('dirty'));
+    showGlobalSuccess(`已保存全部更改！`);
+  }catch(err){alert('保存失败：'+err.message);}
+  updateSaveBtn();
+}
 
 async function deletePlace(i){
   const name=placesCache[i].name_en||placesCache[i].name_zh;
   if(!confirm(`删除「${name}」？此操作不可恢复`))return;
   placesCache.splice(i,1);
-  try{await writePlaces(placesCache,`Delete ${name}`);renderList();}
+  try{await writePlaces(placesCache,`Delete ${name}`);renderList();showGlobalSuccess('已删除');}
   catch(e){alert('删除失败：'+e.message);await fetchPlaces();}
 }
 
-function openForm(idx){
-  editingId=idx; resetForm();
-  document.getElementById('formTitle').textContent=idx===null?'新增地点':'编辑地点';
-  if(idx!==null){
-    const p=placesCache[idx];
-    const fields={fNameEn:'name_en',fNameZh:'name_zh',fAddrEn:'addr_en',fAddrZh:'addr_zh',fYelp:'yelp',fGoogle:'google_page',fApple:'apple',fAmap:'amap',fDianping:'dianping',fEmoji:'emoji',fDescEn:'desc_en',fDescZh:'desc_zh'};
-    Object.entries(fields).forEach(([id,key])=>{if(p[key])document.getElementById(id).value=p[key];});
-    document.getElementById('fCity').value=p.city||'bayarea';
-    document.getElementById('fCat').value=p.cat||'eat';
-    document.getElementById('fScore').value=p.score||4.5;
-    skyOn=p.sky||false;
-    document.getElementById('skyToggle').className='sky-toggle'+(skyOn?' on':'');
-    tags=p.tags_en||[];renderTags();
-    updatePreview();
-    document.getElementById('previewSection').style.display='flex';
-    document.getElementById('modeTabs').style.display='none';
-    ['modeUpload','modePaste','modeManual'].forEach(id=>document.getElementById(id).style.display='none');
-  } else {
-    document.getElementById('modeTabs').style.display='flex';
-    switchMode(0);
-  }
-  document.getElementById('listView').style.display='none';
-  const fv=document.getElementById('formView');
-  fv.style.display='flex';fv.style.flexDirection='column';
-  window.scrollTo(0,0);
+// DRAG
+function dragStart(e,i){dragSrc=i;setTimeout(()=>document.querySelectorAll('.place-card')[getFilteredIndex(i)]?.classList.add('dragging'),0);}
+function dragOver(e,i){e.preventDefault();document.querySelectorAll('.place-card').forEach(r=>r.classList.remove('drag-over'));if(dragSrc!==i)document.querySelectorAll('.place-card')[getFilteredIndex(i)]?.classList.add('drag-over');}
+function dragDrop(e,i){
+  e.preventDefault();
+  if(dragSrc===null||dragSrc===i)return;
+  const a=[...placesCache];const[m]=a.splice(dragSrc,1);a.splice(i,0,m);
+  placesCache=a;dragSrc=null;renderList();
+  writePlaces(placesCache,'Reorder places').catch(console.log);
 }
-function closeForm(){
-  document.getElementById('formView').style.display='none';
-  document.getElementById('listView').style.display='flex';
-  document.getElementById('listView').style.flexDirection='column';
-}
-function resetForm(){
-  ['fNameEn','fNameZh','fAddrEn','fAddrZh','fYelp','fGoogle','fApple','fAmap','fDianping','fEmoji','fDescEn','fDescZh'].forEach(id=>{const el=document.getElementById(id);if(el){el.value='';el.className='f-input';}});
-  document.getElementById('fScore').value='4.5';
-  tags=[];renderTags();skyOn=false;
-  document.getElementById('skyToggle').className='sky-toggle';
-  descEnAI=descZhAI=descEnDirty=descZhDirty=false;
-  ['addrEnChip','addrZhChip','descEnChip','descZhChip','tagsChip','descEnEdited','descZhEdited'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
-  document.getElementById('tagsEditor').classList.remove('ai-filled');
-  document.getElementById('previewSection').style.display='none';
-  document.getElementById('uploadedPreview').style.display='none';
-  document.getElementById('successBanner').classList.remove('show');
-  document.getElementById('errBanner').classList.remove('show');
+function dragEnd(){document.querySelectorAll('.place-card').forEach(r=>{r.classList.remove('dragging','drag-over');});dragSrc=null;}
+function getFilteredIndex(realIdx){
+  const filtered=filterCity==='all'?placesCache:placesCache.filter(p=>p.city===filterCity);
+  return filtered.indexOf(placesCache[realIdx]);
 }
 
-function switchMode(i){
-  [0,1,2].forEach(n=>document.getElementById('mTab'+n).className='mode-tab'+(n===i?' on':''));
-  document.getElementById('modeUpload').style.display=i===0?'block':'none';
-  document.getElementById('modePaste').style.display=i===1?'flex':'none';
-  document.getElementById('modeManual').style.display=i===2?'block':'none';
+function showGlobalSuccess(msg){
+  const el=document.getElementById('globalSuccess');
+  el.textContent=msg;el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),2500);
 }
 
-function handleUpload(e){
+// ADD MODAL
+function openAdd(){
+  resetAdd();
+  document.getElementById('addModal').classList.add('open');
+}
+function closeAdd(){document.getElementById('addModal').classList.remove('open');}
+function resetAdd(){
+  ['aNameEn','aNameZh','aAddrEn','aAddrZh','aYelp','aGoogle','aApple','aAmap','aDianping','aEmoji','aDescEn','aDescZh','aLinkInput','aImgUrl'].forEach(id=>{
+    const el=document.getElementById(id);if(el){el.value='';el.className=el.tagName==='TEXTAREA'?'a-input':'a-input';}
+  });
+  addTags=[];renderAddTags();addSkyOn=false;
+  document.getElementById('aSkyToggle').className='sky-toggle-a';
+  document.getElementById('aScore').value='4.5';
+  addDescEnAI=addDescZhAI=addDescEnDirty=addDescZhDirty=false;
+  ['aAddrEnChip','aAddrZhChip','aDescEnChip','aDescZhChip','aTagsChip','aDescEnEdited','aDescZhEdited'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});
+  document.getElementById('aTagsEditor').classList.remove('ai-filled');
+  document.getElementById('addSuccess').classList.remove('show');
+  document.getElementById('addErr').classList.remove('show');
+  document.getElementById('aUploadedPreview').style.display='none';
+  const area=document.getElementById('aImgArea');
+  area.classList.remove('has-img');
+  area.innerHTML=`<div class="upload-icon">🖼</div><div class="img-upload-text">点击上传图片</div><div class="img-upload-sub">支持 JPG、PNG，建议正方形</div><div class="img-progress" id="aImgProgress"><div class="progress-bar"><div class="progress-fill" id="aProgressFill" style="width:0%"></div></div><span style="font-size:11px;color:#888">上传中...</span></div>`;
+  area.onclick=()=>document.getElementById('aImgInput').click();
+  switchAddMode(0);
+}
+function switchAddMode(i){
+  [0,1,2].forEach(n=>document.getElementById('aTab'+n).className='mode-tab'+(n===i?' on':''));
+  document.getElementById('aModeUpload').style.display=i===0?'block':'none';
+  document.getElementById('aModePaste').style.display=i===1?'flex':'none';
+  document.getElementById('aModeManual').style.display=i===2?'block':'none';
+}
+function handleAddUpload(e){
   const file=e.target.files[0];if(!file)return;
   const reader=new FileReader();
-  reader.onload=ev=>{document.getElementById('uploadedImg').src=ev.target.result;document.getElementById('uploadedPreview').style.display='flex';};
+  reader.onload=ev=>{document.getElementById('aUploadedImg').src=ev.target.result;document.getElementById('aUploadedPreview').style.display='flex';};
   reader.readAsDataURL(file);
 }
-async function aiRecognize(){
-  const btn=document.getElementById('aiBtn');
-  const img=document.getElementById('uploadedImg');
+async function aiRecognizeAdd(){
+  const btn=document.getElementById('aAiBtn');
+  const img=document.getElementById('aUploadedImg');
   if(!img.src||img.src===window.location.href)return;
   btn.textContent='AI 识别中...';btn.disabled=true;
-  const base64=img.src.split(',')[1];
-  const mt=img.src.split(';')[0].split(':')[1];
+  const base64=img.src.split(',')[1];const mt=img.src.split(';')[0].split(':')[1];
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mt,data:base64}},{type:'text',text:'Extract place info from this screenshot. Return ONLY valid JSON no markdown:\n{"name_en":"","name_zh":"","addr_en":"","addr_zh":"","city":"bayarea|la|shanghai|guangzhou|nanjing","cat":"eat|drink|visit|stay|buy","emoji":"","tags_en":[],"tags_zh":[],"desc_en":"2-3 sentence first-person rec","desc_zh":"2-3句第一人称推荐"}'}]}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:mt,data:base64}},{type:'text',text:'Extract place info from this screenshot. Return ONLY valid JSON, no markdown, no extra text:\n{"name_en":"","name_zh":"","addr_en":"","addr_zh":"","city":"bayarea|la|shanghai|guangzhou|nanjing","cat":"eat|drink|visit|stay|buy","emoji":"","tags_en":[],"tags_zh":[],"desc_en":"2-3 sentence first-person recommendation in English","desc_zh":"2-3句第一人称中文推荐"}'}]}]})});
     const data=await res.json();
-    fillFromAI(JSON.parse(data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim()));
-  }catch(e){btn.textContent='识别失败，请手动填写';}
-  btn.innerHTML='<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6" stroke-linecap="round"/></svg> 重新识别';
+    fillAddFromAI(JSON.parse(data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim()));
+  }catch(e){btn.textContent='识别失败';}
+  btn.innerHTML='<svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8h6M8 5v6" stroke-linecap="round"/></svg> 重新识别';
   btn.disabled=false;
 }
-async function fetchLink(){
-  const url=document.getElementById('linkInput').value.trim();if(!url)return;
-  const btn=document.getElementById('fetchBtn');btn.textContent='抓取中...';btn.disabled=true;
+async function fetchLinkAdd(){
+  const url=document.getElementById('aLinkInput').value.trim();if(!url)return;
+  const btn=document.getElementById('aFetchBtn');btn.textContent='抓取中...';btn.disabled=true;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:`URL: ${url}\n\nInfer place info. Return ONLY valid JSON no markdown:\n{"name_en":"","name_zh":"","addr_en":"","addr_zh":"","city":"bayarea|la|shanghai|guangzhou|nanjing","cat":"eat|drink|visit|stay|buy","emoji":"","tags_en":[],"tags_zh":[],"desc_en":"2-3 sentence rec","desc_zh":"2-3句推荐"}`}]})});
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:`URL: ${url}\n\nInfer place info. Return ONLY valid JSON, no markdown:\n{"name_en":"","name_zh":"","addr_en":"","addr_zh":"","city":"bayarea|la|shanghai|guangzhou|nanjing","cat":"eat|drink|visit|stay|buy","emoji":"","tags_en":[],"tags_zh":[],"desc_en":"2-3 sentence recommendation","desc_zh":"2-3句推荐"}`}]})});
     const data=await res.json();
     const parsed=JSON.parse(data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim());
-    if(url.includes('yelp.com'))document.getElementById('fYelp').value=url;
-    else document.getElementById('fGoogle').value=url;
-    fillFromAI(parsed);
+    if(url.includes('yelp.com'))document.getElementById('aYelp').value=url;
+    else document.getElementById('aGoogle').value=url;
+    fillAddFromAI(parsed);
   }catch(e){alert('抓取失败，请手动填写');}
   btn.textContent='抓取';btn.disabled=false;
 }
-function fillFromAI(d){
-  const set=(id,v,chip)=>{if(!v)return;const el=document.getElementById(id);el.value=v;el.className='f-input ai-filled';if(chip)document.getElementById(chip).style.display='';};
-  set('fNameEn',d.name_en);set('fNameZh',d.name_zh);
-  set('fAddrEn',d.addr_en,'addrEnChip');set('fAddrZh',d.addr_zh,'addrZhChip');
-  set('fDescEn',d.desc_en,'descEnChip');set('fDescZh',d.desc_zh,'descZhChip');
-  if(d.desc_en){descEnAI=true;descEnDirty=false;}
-  if(d.desc_zh){descZhAI=true;descZhDirty=false;}
-  if(d.city)document.getElementById('fCity').value=d.city;
-  if(d.cat)document.getElementById('fCat').value=d.cat;
-  if(d.emoji)document.getElementById('fEmoji').value=d.emoji;
-  if(d.tags_en&&d.tags_en.length){tags=d.tags_en;renderTags();document.getElementById('tagsEditor').classList.add('ai-filled');document.getElementById('tagsChip').style.display='';}
-  updatePreview();document.getElementById('previewSection').style.display='flex';
+function fillAddFromAI(d){
+  const set=(id,v,chip)=>{if(!v)return;const el=document.getElementById(id);el.value=v;el.className='a-input ai-filled';if(chip)document.getElementById(chip).style.display='';};
+  set('aNameEn',d.name_en);set('aNameZh',d.name_zh);
+  set('aAddrEn',d.addr_en,'aAddrEnChip');set('aAddrZh',d.addr_zh,'aAddrZhChip');
+  set('aDescEn',d.desc_en,'aDescEnChip');set('aDescZh',d.desc_zh,'aDescZhChip');
+  if(d.desc_en){addDescEnAI=true;addDescEnDirty=false;}
+  if(d.desc_zh){addDescZhAI=true;addDescZhDirty=false;}
+  if(d.city)document.getElementById('aCity').value=d.city;
+  if(d.cat)document.getElementById('aCat').value=d.cat;
+  if(d.emoji)document.getElementById('aEmoji').value=d.emoji;
+  if(d.tags_en&&d.tags_en.length){addTags=d.tags_en;renderAddTags();document.getElementById('aTagsEditor').classList.add('ai-filled');document.getElementById('aTagsChip').style.display='';}
 }
-function onDescEdit(lang){
-  if(lang==='en'&&descEnAI&&!descEnDirty){descEnDirty=true;document.getElementById('fDescEn').className='f-input ai-edited';document.getElementById('descEnChip').style.display='none';document.getElementById('descEnEdited').style.display='';}
-  if(lang==='zh'&&descZhAI&&!descZhDirty){descZhDirty=true;document.getElementById('fDescZh').className='f-input ai-edited';document.getElementById('descZhChip').style.display='none';document.getElementById('descZhEdited').style.display='';}
-  updatePreview();
+function onAddDescEdit(lang){
+  if(lang==='en'&&addDescEnAI&&!addDescEnDirty){addDescEnDirty=true;document.getElementById('aDescEn').className='a-input ai-edited';document.getElementById('aDescEnChip').style.display='none';document.getElementById('aDescEnEdited').style.display='';}
+  if(lang==='zh'&&addDescZhAI&&!addDescZhDirty){addDescZhDirty=true;document.getElementById('aDescZh').className='a-input ai-edited';document.getElementById('aDescZhChip').style.display='none';document.getElementById('aDescZhEdited').style.display='';}
 }
-function renderTags(){
-  const editor=document.getElementById('tagsEditor');
-  const input=document.getElementById('tagInput');
+function renderAddTags(){
+  const editor=document.getElementById('aTagsEditor');
+  const input=document.getElementById('aTagInput');
   editor.innerHTML='';
-  tags.forEach((t,i)=>{const pill=document.createElement('div');pill.className='tag-pill';pill.innerHTML=`${t}<span class="tag-x" onclick="removeTag(${i})">✕</span>`;editor.appendChild(pill);});
+  addTags.forEach((t,i)=>{const pill=document.createElement('div');pill.className='tag-pill';pill.innerHTML=`${t}<span class="tag-x" onclick="removeAddTag(${i})">✕</span>`;editor.appendChild(pill);});
   editor.appendChild(input);
 }
-function handleTagKey(e){if((e.key==='Enter'||e.key===',')&&e.target.value.trim()){e.preventDefault();tags.push(e.target.value.trim());e.target.value='';renderTags();updatePreview();}}
-function removeTag(i){tags.splice(i,1);renderTags();updatePreview();}
-function toggleSky(){skyOn=!skyOn;document.getElementById('skyToggle').className='sky-toggle'+(skyOn?' on':'');}
-function updatePreview(){
-  const ne=document.getElementById('fNameEn').value;
-  const nz=document.getElementById('fNameZh').value;
-  if(!ne&&!nz)return;
-  const cat=document.getElementById('fCat').value;
-  const emoji=document.getElementById('fEmoji').value||CAT_EMOJI[cat];
-  const cityEl=document.getElementById('fCity');
-  const catEl=document.getElementById('fCat');
-  document.getElementById('previewSection').style.display='flex';
-  document.getElementById('previewHero').textContent=emoji;
-  document.getElementById('previewHero').style.background=CAT_BG[cat]||'#F5F5F5';
-  document.getElementById('previewName').textContent=ne||nz;
-  document.getElementById('previewSub').textContent=`${cityEl.options[cityEl.selectedIndex].text} · ${catEl.options[catEl.selectedIndex].text}`;
-  document.getElementById('previewTags').innerHTML=tags.slice(0,5).map(t=>`<span class="preview-tag">${t}</span>`).join('');
-  document.getElementById('previewDesc').textContent=document.getElementById('fDescEn').value||'描述...';
+function handleAddTagKey(e){if((e.key==='Enter'||e.key===',')&&e.target.value.trim()){e.preventDefault();addTags.push(e.target.value.trim());e.target.value='';renderAddTags();}}
+function removeAddTag(i){addTags.splice(i,1);renderAddTags();}
+function toggleAddSky(){addSkyOn=!addSkyOn;document.getElementById('aSkyToggle').className='sky-toggle-a'+(addSkyOn?' on':'');}
+
+async function uploadImageAdd(e){
+  const file=e.target.files[0];if(!file)return;
+  const area=document.getElementById('aImgArea');
+  const prog=document.getElementById('aImgProgress');
+  prog.classList.add('show');
+  try{
+    const url=await uploadToCloudinary(file,pct=>{document.getElementById('aProgressFill').style.width=pct+'%';});
+    document.getElementById('aImgUrl').value=url;
+    area.classList.add('has-img');
+    area.innerHTML=`<img src="${url}" alt=""><div class="img-progress" id="aImgProgress" style="display:none"><div class="progress-bar"><div class="progress-fill" id="aProgressFill" style="width:0%"></div></div><span style="font-size:11px;color:#888">上传中...</span></div>`;
+    showGlobalSuccess('图片上传成功！');
+  }catch(err){alert('上传失败：'+err.message);prog.classList.remove('show');}
+}
+function previewAddImg(){
+  const url=document.getElementById('aImgUrl').value.trim();
+  const area=document.getElementById('aImgArea');
+  if(url){area.classList.add('has-img');area.innerHTML=`<img src="${url}" alt="">`;area.onclick=null;}
+  else{area.classList.remove('has-img');}
 }
 
-async function submitPlace(){
-  const nameEn=document.getElementById('fNameEn').value.trim();
+async function submitAdd(){
+  const nameEn=document.getElementById('aNameEn').value.trim();
   if(!nameEn){alert('请至少填写英文名称');return;}
   if(!ghConfig.token){alert('请先配置 GitHub');openSettings();return;}
-  const btn=document.getElementById('submitBtn');
+  const btn=document.getElementById('aSubmitBtn');
   btn.textContent='保存中...';btn.disabled=true;
-  document.getElementById('errBanner').classList.remove('show');
+  document.getElementById('addErr').classList.remove('show');
   const place={
-    id:editingId!==null?placesCache[editingId].id:Date.now(),
-    city:document.getElementById('fCity').value,
-    cat:document.getElementById('fCat').value,
-    emoji:document.getElementById('fEmoji').value||CAT_EMOJI[document.getElementById('fCat').value],
-    tall:editingId!==null?(placesCache[editingId].tall||false):false,
-    name_en:nameEn,name_zh:document.getElementById('fNameZh').value.trim(),
+    id:Date.now(),
+    city:document.getElementById('aCity').value,
+    cat:document.getElementById('aCat').value,
+    emoji:document.getElementById('aEmoji').value||CAT_EMOJI[document.getElementById('aCat').value],
+    image_url:document.getElementById('aImgUrl').value.trim(),
+    tall:false,
+    name_en:nameEn,
+    name_zh:document.getElementById('aNameZh').value.trim(),
     sub_en:'',sub_zh:'',
-    addr_en:document.getElementById('fAddrEn').value.trim(),
-    addr_zh:document.getElementById('fAddrZh').value.trim(),
-    sky:skyOn,score:parseFloat(document.getElementById('fScore').value)||4.5,
-    desc_en:document.getElementById('fDescEn').value.trim(),
-    desc_zh:document.getElementById('fDescZh').value.trim(),
-    desc_en_edited:descEnDirty,desc_zh_edited:descZhDirty,
-    tags_en:tags,tags_zh:tags,
-    yelp:document.getElementById('fYelp').value.trim(),
-    google_page:document.getElementById('fGoogle').value.trim(),
-    gmaps:document.getElementById('fGoogle').value.trim(),
-    apple:document.getElementById('fApple').value.trim(),
-    amap:document.getElementById('fAmap').value.trim(),
-    dianping:document.getElementById('fDianping').value.trim(),
+    addr_en:document.getElementById('aAddrEn').value.trim(),
+    addr_zh:document.getElementById('aAddrZh').value.trim(),
+    sky:addSkyOn,
+    score:parseFloat(document.getElementById('aScore').value)||4.5,
+    desc_en:document.getElementById('aDescEn').value.trim(),
+    desc_zh:document.getElementById('aDescZh').value.trim(),
+    desc_en_edited:addDescEnDirty,
+    desc_zh_edited:addDescZhDirty,
+    tags_en:addTags,tags_zh:addTags,
+    yelp:document.getElementById('aYelp').value.trim(),
+    google_page:document.getElementById('aGoogle').value.trim(),
+    gmaps:document.getElementById('aGoogle').value.trim(),
+    apple:document.getElementById('aApple').value.trim(),
+    amap:document.getElementById('aAmap').value.trim(),
+    dianping:document.getElementById('aDianping').value.trim(),
   };
   try{
     await fetchPlaces();
-    if(editingId!==null)placesCache[editingId]=place;
-    else placesCache.push(place);
-    await writePlaces(placesCache,editingId!==null?`Edit ${nameEn}`:`Add ${nameEn}`);
-    document.getElementById('successMsg').textContent=editingId!==null?`「${nameEn}」已更新！`:`「${nameEn}」已保存！`;
-    document.getElementById('successBanner').classList.add('show');
-    setTimeout(()=>{document.getElementById('successBanner').classList.remove('show');closeForm();},2000);
+    placesCache.push(place);
+    await writePlaces(placesCache,`Add ${nameEn}`);
+    document.getElementById('addSuccessMsg').textContent=`「${nameEn}」已保存！`;
+    document.getElementById('addSuccess').classList.add('show');
+    renderList();
+    setTimeout(()=>{document.getElementById('addSuccess').classList.remove('show');closeAdd();},1800);
   }catch(e){
-    document.getElementById('errMsg').textContent='保存失败：'+e.message;
-    document.getElementById('errBanner').classList.add('show');
+    document.getElementById('addErrMsg').textContent='保存失败：'+e.message;
+    document.getElementById('addErr').classList.add('show');
   }
   btn.textContent='保存到 GitHub';btn.disabled=false;
 }
