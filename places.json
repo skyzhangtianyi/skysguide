@@ -3,18 +3,18 @@
     "id": 1,
     "city": "bayarea",
     "cat": "eat",
-    "emoji": "ð¦",
+    "emoji": "Ã°ÂÂ¦Â",
     "tall": false,
     "name_en": "New England Lobster",
-    "name_zh": "æ°è±æ ¼å°é¾è¾",
-    "sub_en": "Burlingame Â· Seafood",
-    "sub_zh": "ä¼¯çµæ ¼å§ Â· æµ·é²",
+    "name_zh": "Ã¦ÂÂ°Ã¨ÂÂ±Ã¦Â Â¼Ã¥ÂÂ°Ã©Â¾ÂÃ¨ÂÂ¾",
+    "sub_en": "Burlingame ÃÂ· Seafood",
+    "sub_zh": "Ã¤Â¼Â¯Ã§ÂÂµÃ¦Â Â¼Ã¥Â§Â ÃÂ· Ã¦ÂµÂ·Ã©Â²Â",
     "addr_en": "824 Cowan Rd, Burlingame, CA 94010",
     "addr_zh": "824 Cowan Rd, Burlingame, CA 94010",
     "sky": true,
     "score": 4.8,
-    "desc_en": "Best lobster roll in the Bay, hands down. Go for the dressed version. Long lines on weekends â arrive early.",
-    "desc_zh": "æ¹¾åºæå¥½åçé¾è¾å·ï¼ç¹ç»å¸é»æ²¹æ¬¾ãå¨æ«æéé¿ï¼æ©ç¹å»ã",
+    "desc_en": "Best lobster roll in the Bay, hands down. Go for the dressed version. Long lines on weekends Ã¢ÂÂ arrive early.",
+    "desc_zh": "Ã¦Â¹Â¾Ã¥ÂÂºÃ¦ÂÂÃ¥Â¥Â½Ã¥ÂÂÃ§ÂÂÃ©Â¾ÂÃ¨ÂÂ¾Ã¥ÂÂ·Ã¯Â¼ÂÃ§ÂÂ¹Ã§Â»ÂÃ¥ÂÂ¸Ã©Â»ÂÃ¦Â²Â¹Ã¦Â¬Â¾Ã£ÂÂÃ¥ÂÂ¨Ã¦ÂÂ«Ã¦ÂÂÃ©ÂÂÃ©ÂÂ¿Ã¯Â¼ÂÃ¦ÂÂ©Ã§ÂÂ¹Ã¥ÂÂ»Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -25,11 +25,11 @@
       "Outdoor seating"
     ],
     "tags_zh": [
-      "é¾è¾å·",
-      "éæ°åæ¯è¹",
-      "ä¼é²",
-      "å¼å¾ä¸ç¨",
-      "æ·å¤åº§ä½"
+      "Ã©Â¾ÂÃ¨ÂÂ¾Ã¥ÂÂ·",
+      "Ã©ÂÂÃ¦ÂÂ°Ã¥ÂÂÃ¦ÂÂ¯Ã¨ÂÂ¹",
+      "Ã¤Â¼ÂÃ©ÂÂ²",
+      "Ã¥ÂÂ¼Ã¥Â¾ÂÃ¤Â¸ÂÃ§Â¨Â",
+      "Ã¦ÂÂ·Ã¥Â¤ÂÃ¥ÂºÂ§Ã¤Â½Â"
     ],
     "yelp": "https://www.yelp.com/biz/new-england-lobster-market-and-eatery-burlingame",
     "google_page": "https://maps.google.com/?q=New+England+Lobster+Burlingame",
@@ -42,18 +42,18 @@
     "id": 2,
     "city": "bayarea",
     "cat": "visit",
-    "emoji": "ð",
+    "emoji": "Ã°ÂÂÂ",
     "tall": true,
     "name_en": "Alcatraz Island",
-    "name_zh": "æ¶é­å²",
-    "sub_en": "SF Bay Â· Historic prison",
-    "sub_zh": "æ§éå±±æ¹¾ Â· åå²æ¯ç¹",
+    "name_zh": "Ã¦ÂÂ¶Ã©Â­ÂÃ¥Â²Â",
+    "sub_en": "SF Bay ÃÂ· Historic prison",
+    "sub_zh": "Ã¦ÂÂ§Ã©ÂÂÃ¥Â±Â±Ã¦Â¹Â¾ ÃÂ· Ã¥ÂÂÃ¥ÂÂ²Ã¦ÂÂ¯Ã§ÂÂ¹",
     "addr_en": "Alcatraz Island, San Francisco, CA",
-    "addr_zh": "æ¶é­å²ï¼æ§éå±±æ¹¾",
+    "addr_zh": "Ã¦ÂÂ¶Ã©Â­ÂÃ¥Â²ÂÃ¯Â¼ÂÃ¦ÂÂ§Ã©ÂÂÃ¥Â±Â±Ã¦Â¹Â¾",
     "sky": true,
     "score": 4.5,
-    "desc_en": "Book tickets 2+ weeks ahead â they sell out fast. The audio tour is genuinely excellent. Budget 3-4 hours.",
-    "desc_zh": "è³å°æåä¸¤å¨ä¹°ç¥¨ï¼ç»å¸¸å®ç½ãè¯­é³å¯¼è§éå¸¸å¼å¾å¬ï¼çåº3-4å°æ¶ã",
+    "desc_en": "Book tickets 2+ weeks ahead Ã¢ÂÂ they sell out fast. The audio tour is genuinely excellent. Budget 3-4 hours.",
+    "desc_zh": "Ã¨ÂÂ³Ã¥Â°ÂÃ¦ÂÂÃ¥ÂÂÃ¤Â¸Â¤Ã¥ÂÂ¨Ã¤Â¹Â°Ã§Â¥Â¨Ã¯Â¼ÂÃ§Â»ÂÃ¥Â¸Â¸Ã¥ÂÂ®Ã§Â½ÂÃ£ÂÂÃ¨Â¯Â­Ã©ÂÂ³Ã¥Â¯Â¼Ã¨Â§ÂÃ©ÂÂÃ¥Â¸Â¸Ã¥ÂÂ¼Ã¥Â¾ÂÃ¥ÂÂ¬Ã¯Â¼ÂÃ§ÂÂÃ¥ÂÂº3-4Ã¥Â°ÂÃ¦ÂÂ¶Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -64,35 +64,35 @@
       "Historic"
     ],
     "tags_zh": [
-      "å¿å»",
-      "åæ¸¡è¹",
-      "æåè®¢ç¥¨",
-      "è¯­é³å¯¼è§",
-      "åå²"
+      "Ã¥Â¿ÂÃ¥ÂÂ»",
+      "Ã¥ÂÂÃ¦Â¸Â¡Ã¨ÂÂ¹",
+      "Ã¦ÂÂÃ¥ÂÂÃ¨Â®Â¢Ã§Â¥Â¨",
+      "Ã¨Â¯Â­Ã©ÂÂ³Ã¥Â¯Â¼Ã¨Â§Â",
+      "Ã¥ÂÂÃ¥ÂÂ²"
     ],
     "yelp": "https://www.yelp.com/biz/alcatraz-island-san-francisco",
     "google_page": "https://maps.google.com/?q=Alcatraz+Island+San+Francisco",
     "gmaps": "https://maps.google.com/?q=Alcatraz+Island+San+Francisco",
     "apple": "https://maps.apple.com/?q=Alcatraz+Island",
-    "amap": "https://uri.amap.com/search?keyword=æ¶é­å²+æ§éå±±",
+    "amap": "https://uri.amap.com/search?keyword=Ã¦ÂÂ¶Ã©Â­ÂÃ¥Â²Â+Ã¦ÂÂ§Ã©ÂÂÃ¥Â±Â±",
     "dianping": ""
   },
   {
     "id": 3,
     "city": "bayarea",
     "cat": "eat",
-    "emoji": "ð¥",
+    "emoji": "Ã°ÂÂ¥Â",
     "tall": false,
     "name_en": "Tartine Bakery",
-    "name_zh": "Tartineé¢åå",
-    "sub_en": "Mission District Â· Bakery",
-    "sub_zh": "ç±³æåº Â· é¢åæ¿",
+    "name_zh": "TartineÃ©ÂÂ¢Ã¥ÂÂÃ¥ÂÂ",
+    "sub_en": "Mission District ÃÂ· Bakery",
+    "sub_zh": "Ã§Â±Â³Ã¦ÂÂÃ¥ÂÂº ÃÂ· Ã©ÂÂ¢Ã¥ÂÂÃ¦ÂÂ¿",
     "addr_en": "600 Guerrero St, San Francisco, CA 94110",
-    "addr_zh": "600 Guerrero St, æ§éå±±",
+    "addr_zh": "600 Guerrero St, Ã¦ÂÂ§Ã©ÂÂÃ¥Â±Â±",
     "sky": true,
     "score": 4.6,
     "desc_en": "Show up at 5pm when fresh bread comes out. The morning bun is life-changing. Worth every minute of the queue.",
-    "desc_zh": "ä¸å5ç¹å»ï¼ååºççä¹¡æé¢åæ¯æ¹¾åºå¤©è±æ¿ãæéå®å¨å¼å¾ã",
+    "desc_zh": "Ã¤Â¸ÂÃ¥ÂÂ5Ã§ÂÂ¹Ã¥ÂÂ»Ã¯Â¼ÂÃ¥ÂÂÃ¥ÂÂºÃ§ÂÂÃ§ÂÂÃ¤Â¹Â¡Ã¦ÂÂÃ©ÂÂ¢Ã¥ÂÂÃ¦ÂÂ¯Ã¦Â¹Â¾Ã¥ÂÂºÃ¥Â¤Â©Ã¨ÂÂ±Ã¦ÂÂ¿Ã£ÂÂÃ¦ÂÂÃ©ÂÂÃ¥Â®ÂÃ¥ÂÂ¨Ã¥ÂÂ¼Ã¥Â¾ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -103,11 +103,11 @@
       "Morning bun"
     ],
     "tags_zh": [
-      "ä¹¡æé¢å",
-      "æé",
-      "5ç¹åºç",
-      "SFç»å¸",
-      "æ¨å"
+      "Ã¤Â¹Â¡Ã¦ÂÂÃ©ÂÂ¢Ã¥ÂÂ",
+      "Ã¦ÂÂÃ©ÂÂ",
+      "5Ã§ÂÂ¹Ã¥ÂÂºÃ§ÂÂ",
+      "SFÃ§Â»ÂÃ¥ÂÂ¸",
+      "Ã¦ÂÂ¨Ã¥ÂÂ"
     ],
     "yelp": "https://www.yelp.com/biz/tartine-bakery-san-francisco",
     "google_page": "https://maps.google.com/?q=Tartine+Bakery+San+Francisco",
@@ -120,18 +120,18 @@
     "id": 4,
     "city": "bayarea",
     "cat": "visit",
-    "emoji": "ð¸",
+    "emoji": "Ã°ÂÂÂ¸",
     "tall": true,
     "name_en": "Filoli Garden",
-    "name_zh": "è²æ´å©è±å­",
-    "sub_en": "Woodside Â· Historic estate",
-    "sub_zh": "ä¼å¾·èµå¾· Â· åºå­è±å­",
-    "addr_en": "86 CaÃ±ada Rd, Woodside, CA 94062",
-    "addr_zh": "86 CaÃ±ada Rd, Woodside, CA",
+    "name_zh": "Ã¨ÂÂ²Ã¦Â´ÂÃ¥ÂÂ©Ã¨ÂÂ±Ã¥ÂÂ­",
+    "sub_en": "Woodside ÃÂ· Historic estate",
+    "sub_zh": "Ã¤Â¼ÂÃ¥Â¾Â·Ã¨ÂµÂÃ¥Â¾Â· ÃÂ· Ã¥ÂºÂÃ¥ÂÂ­Ã¨ÂÂ±Ã¥ÂÂ­",
+    "addr_en": "86 CaÃÂ±ada Rd, Woodside, CA 94062",
+    "addr_zh": "86 CaÃÂ±ada Rd, Woodside, CA",
     "sky": true,
     "score": 4.2,
-    "desc_en": "A perfect half-day trip from SF. Spring is stunning â tulips and wisteria everywhere. Very peaceful escape.",
-    "desc_zh": "ä»æ§éå±±åºåçå®ç¾åæ¥æ¸¸ï¼æ¥å¤©ééé¦åç´«è¤çå¼ï¼éå¸¸æ²»æã",
+    "desc_en": "A perfect half-day trip from SF. Spring is stunning Ã¢ÂÂ tulips and wisteria everywhere. Very peaceful escape.",
+    "desc_zh": "Ã¤Â»ÂÃ¦ÂÂ§Ã©ÂÂÃ¥Â±Â±Ã¥ÂÂºÃ¥ÂÂÃ§ÂÂÃ¥Â®ÂÃ§Â¾ÂÃ¥ÂÂÃ¦ÂÂ¥Ã¦Â¸Â¸Ã¯Â¼ÂÃ¦ÂÂ¥Ã¥Â¤Â©Ã©ÂÂÃ©ÂÂÃ©Â¦ÂÃ¥ÂÂÃ§Â´Â«Ã¨ÂÂ¤Ã§ÂÂÃ¥Â¼ÂÃ¯Â¼ÂÃ©ÂÂÃ¥Â¸Â¸Ã¦Â²Â»Ã¦ÂÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -142,11 +142,11 @@
       "Peaceful"
     ],
     "tags_zh": [
-      "ä¸æ¥æ¸¸",
-      "æ¥å­£èµè±",
-      "æå½±",
-      "åå²åºå­",
-      "æ²»æ"
+      "Ã¤Â¸ÂÃ¦ÂÂ¥Ã¦Â¸Â¸",
+      "Ã¦ÂÂ¥Ã¥Â­Â£Ã¨ÂµÂÃ¨ÂÂ±",
+      "Ã¦ÂÂÃ¥Â½Â±",
+      "Ã¥ÂÂÃ¥ÂÂ²Ã¥ÂºÂÃ¥ÂÂ­",
+      "Ã¦Â²Â»Ã¦ÂÂ"
     ],
     "yelp": "https://www.yelp.com/biz/filoli-woodside",
     "google_page": "https://maps.google.com/?q=Filoli+Garden+Woodside",
@@ -159,18 +159,18 @@
     "id": 5,
     "city": "guangzhou",
     "cat": "visit",
-    "emoji": "ð®",
+    "emoji": "Ã°ÂÂÂ®",
     "tall": false,
     "name_en": "Guangyue Tiandi",
-    "name_zh": "å¹¿ç²¤å¤©å°",
-    "sub_en": "Liwan Â· Heritage block",
-    "sub_zh": "èæ¹¾ Â· åå²è¡åº",
+    "name_zh": "Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°",
+    "sub_en": "Liwan ÃÂ· Heritage block",
+    "sub_zh": "Ã¨ÂÂÃ¦Â¹Â¾ ÃÂ· Ã¥ÂÂÃ¥ÂÂ²Ã¨Â¡ÂÃ¥ÂÂº",
     "addr_en": "Guangyue Tiandi, Liwan District, Guangzhou",
-    "addr_zh": "å¹¿å·å¸èæ¹¾åºå¹¿ç²¤å¤©å°",
+    "addr_zh": "Ã¥Â¹Â¿Ã¥Â·ÂÃ¥Â¸ÂÃ¨ÂÂÃ¦Â¹Â¾Ã¥ÂÂºÃ¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°",
     "sky": true,
     "score": 4.1,
-    "desc_en": "Beautiful restored heritage block â great for an evening stroll. Very photogenic, especially at night.",
-    "desc_zh": "ä¿®ç¼®ç²¾è¯çèååºï¼æä¸æ£æ­¥æ°å´æå¥½ï¼è¶çº§åºçã",
+    "desc_en": "Beautiful restored heritage block Ã¢ÂÂ great for an evening stroll. Very photogenic, especially at night.",
+    "desc_zh": "Ã¤Â¿Â®Ã§Â¼Â®Ã§Â²Â¾Ã¨ÂÂ¯Ã§ÂÂÃ¨ÂÂÃ¥ÂÂÃ¥ÂÂºÃ¯Â¼ÂÃ¦ÂÂÃ¤Â¸ÂÃ¦ÂÂ£Ã¦Â­Â¥Ã¦Â°ÂÃ¥ÂÂ´Ã¦ÂÂÃ¥Â¥Â½Ã¯Â¼ÂÃ¨Â¶ÂÃ§ÂºÂ§Ã¥ÂÂºÃ§ÂÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -181,35 +181,35 @@
       "Walking street"
     ],
     "tags_zh": [
-      "èåæ°å´",
-      "å¤ææ£æ­¥",
-      "åºç",
-      "åå²å»ºç­",
-      "æ­¥è¡è¡"
+      "Ã¨ÂÂÃ¥ÂÂÃ¦Â°ÂÃ¥ÂÂ´",
+      "Ã¥Â¤ÂÃ¦ÂÂÃ¦ÂÂ£Ã¦Â­Â¥",
+      "Ã¥ÂÂºÃ§ÂÂ",
+      "Ã¥ÂÂÃ¥ÂÂ²Ã¥Â»ÂºÃ§Â­Â",
+      "Ã¦Â­Â¥Ã¨Â¡ÂÃ¨Â¡Â"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=å¹¿ç²¤å¤©å°+å¹¿å·",
-    "gmaps": "https://maps.google.com/?q=å¹¿ç²¤å¤©å°+å¹¿å·",
-    "apple": "https://maps.apple.com/?q=å¹¿ç²¤å¤©å°",
-    "amap": "https://uri.amap.com/search?keyword=å¹¿ç²¤å¤©å°&city=å¹¿å·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/å¹¿ç²¤å¤©å°"
+    "google_page": "https://maps.google.com/?q=Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°+Ã¥Â¹Â¿Ã¥Â·Â",
+    "gmaps": "https://maps.google.com/?q=Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°+Ã¥Â¹Â¿Ã¥Â·Â",
+    "apple": "https://maps.apple.com/?q=Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°",
+    "amap": "https://uri.amap.com/search?keyword=Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°&city=Ã¥Â¹Â¿Ã¥Â·Â",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¥Â¹Â¿Ã§Â²Â¤Ã¥Â¤Â©Ã¥ÂÂ°"
   },
   {
     "id": 6,
     "city": "guangzhou",
     "cat": "drink",
-    "emoji": "ð¸",
+    "emoji": "Ã°ÂÂÂ¸",
     "tall": true,
     "name_en": "No Social Bar",
-    "name_zh": "No Social Bar å¤©å¾·åº",
-    "sub_en": "Tianhe Â· Cocktail bar",
-    "sub_zh": "å¤©å¾·å¹¿åº Â· é¸¡å°¾éå§",
+    "name_zh": "No Social Bar Ã¥Â¤Â©Ã¥Â¾Â·Ã¥ÂºÂ",
+    "sub_en": "Tianhe ÃÂ· Cocktail bar",
+    "sub_zh": "Ã¥Â¤Â©Ã¥Â¾Â·Ã¥Â¹Â¿Ã¥ÂÂº ÃÂ· Ã©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂÃ¥ÂÂ§",
     "addr_en": "Tiande Plaza, Liwan District, Guangzhou",
-    "addr_zh": "å¹¿å·å¸èæ¹¾åºå¤©å¾·å¹¿åº",
+    "addr_zh": "Ã¥Â¹Â¿Ã¥Â·ÂÃ¥Â¸ÂÃ¨ÂÂÃ¦Â¹Â¾Ã¥ÂÂºÃ¥Â¤Â©Ã¥Â¾Â·Ã¥Â¹Â¿Ã¥ÂÂº",
     "sky": true,
     "score": 4.7,
     "desc_en": "One of the best bars in Guangzhou. Exceptional cocktails, cool crowd, not too loud. Go after 10pm.",
-    "desc_zh": "å¹¿å·æå¥½çéå§ä¹ä¸ãé¸¡å°¾éåºè²ï¼æ°å´ææåº¦ä½ä¸åµï¼10ç¹åå»æå¥½ã",
+    "desc_zh": "Ã¥Â¹Â¿Ã¥Â·ÂÃ¦ÂÂÃ¥Â¥Â½Ã§ÂÂÃ©ÂÂÃ¥ÂÂ§Ã¤Â¹ÂÃ¤Â¸ÂÃ£ÂÂÃ©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂÃ¥ÂÂºÃ¨ÂÂ²Ã¯Â¼ÂÃ¦Â°ÂÃ¥ÂÂ´Ã¦ÂÂÃ¦ÂÂÃ¥ÂºÂ¦Ã¤Â½ÂÃ¤Â¸ÂÃ¥ÂÂµÃ¯Â¼Â10Ã§ÂÂ¹Ã¥ÂÂÃ¥ÂÂ»Ã¦ÂÂÃ¥Â¥Â½Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -220,35 +220,35 @@
       "Top GZ bar"
     ],
     "tags_zh": [
-      "ç²¾è°é¸¡å°¾é",
-      "æ·±å¤",
-      "ææåº¦",
-      "ä½è°",
-      "å¹¿å·é¡¶çº§"
+      "Ã§Â²Â¾Ã¨Â°ÂÃ©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂ",
+      "Ã¦Â·Â±Ã¥Â¤Â",
+      "Ã¦ÂÂÃ¦ÂÂÃ¥ÂºÂ¦",
+      "Ã¤Â½ÂÃ¨Â°Â",
+      "Ã¥Â¹Â¿Ã¥Â·ÂÃ©Â¡Â¶Ã§ÂºÂ§"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=No+Social+Bar+å¹¿å·",
-    "gmaps": "https://maps.google.com/?q=No+Social+Bar+å¹¿å·",
-    "apple": "https://maps.apple.com/?q=No+Social+Bar+å¹¿å·",
-    "amap": "https://uri.amap.com/search?keyword=No+Social+Bar&city=å¹¿å·",
+    "google_page": "https://maps.google.com/?q=No+Social+Bar+Ã¥Â¹Â¿Ã¥Â·Â",
+    "gmaps": "https://maps.google.com/?q=No+Social+Bar+Ã¥Â¹Â¿Ã¥Â·Â",
+    "apple": "https://maps.apple.com/?q=No+Social+Bar+Ã¥Â¹Â¿Ã¥Â·Â",
+    "amap": "https://uri.amap.com/search?keyword=No+Social+Bar&city=Ã¥Â¹Â¿Ã¥Â·Â",
     "dianping": "https://www.dianping.com/search/keyword/2/0/No+Social+Bar"
   },
   {
     "id": 7,
     "city": "guangzhou",
     "cat": "eat",
-    "emoji": "ð¦ª",
+    "emoji": "Ã°ÂÂ¦Âª",
     "tall": false,
     "name_en": "Zhizheng Chaoshan (IGC)",
-    "name_zh": "è³æ­£æ½®èIGCåº",
-    "sub_en": "Tianhe Â· Chaoshan cuisine",
-    "sub_zh": "å¤ªå¤æ±IGC Â· æ½®æ±è",
+    "name_zh": "Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂIGCÃ¥ÂºÂ",
+    "sub_en": "Tianhe ÃÂ· Chaoshan cuisine",
+    "sub_zh": "Ã¥Â¤ÂªÃ¥ÂÂ¤Ã¦Â±ÂIGC ÃÂ· Ã¦Â½Â®Ã¦Â±ÂÃ¨ÂÂ",
     "addr_en": "IGC Mall, Tianhe District, Guangzhou",
-    "addr_zh": "å¹¿å·å¸å¤©æ²³åºIGCå¤ªå¤æ±",
+    "addr_zh": "Ã¥Â¹Â¿Ã¥Â·ÂÃ¥Â¸ÂÃ¥Â¤Â©Ã¦Â²Â³Ã¥ÂÂºIGCÃ¥Â¤ÂªÃ¥ÂÂ¤Ã¦Â±Â",
     "sky": true,
     "score": 4.9,
     "desc_en": "The best Chaoshan restaurant in GZ. Braised goose and marinated raw crab are incredible. Must book ahead.",
-    "desc_zh": "å¹¿å·æå»è¿æå¥½çæ½®æ±èãå¤æ°´é¹åèè¹ç»äºï¼å¿é¡»æåé¢è®¢ã",
+    "desc_zh": "Ã¥Â¹Â¿Ã¥Â·ÂÃ¦ÂÂÃ¥ÂÂ»Ã¨Â¿ÂÃ¦ÂÂÃ¥Â¥Â½Ã§ÂÂÃ¦Â½Â®Ã¦Â±ÂÃ¨ÂÂÃ£ÂÂÃ¥ÂÂ¤Ã¦Â°Â´Ã©Â¹ÂÃ¥ÂÂÃ¨ÂÂÃ¨ÂÂ¹Ã§Â»ÂÃ¤ÂºÂÃ¯Â¼ÂÃ¥Â¿ÂÃ©Â¡Â»Ã¦ÂÂÃ¥ÂÂÃ©Â¢ÂÃ¨Â®Â¢Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -259,18 +259,18 @@
       "Book ahead"
     ],
     "tags_zh": [
-      "æ½®æ±è",
-      "ç²¾è´",
-      "å¤æ°´é¹",
-      "èè¹",
-      "éé¢è®¢"
+      "Ã¦Â½Â®Ã¦Â±ÂÃ¨ÂÂ",
+      "Ã§Â²Â¾Ã¨ÂÂ´",
+      "Ã¥ÂÂ¤Ã¦Â°Â´Ã©Â¹Â",
+      "Ã¨ÂÂÃ¨ÂÂ¹",
+      "Ã©ÂÂÃ©Â¢ÂÃ¨Â®Â¢"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=è³æ­£æ½®è+IGC+å¹¿å·",
-    "gmaps": "https://maps.google.com/?q=è³æ­£æ½®è+å¹¿å·",
-    "apple": "https://maps.apple.com/?q=è³æ­£æ½®è+å¹¿å·",
-    "amap": "https://uri.amap.com/search?keyword=è³æ­£æ½®èIGC&city=å¹¿å·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/è³æ­£æ½®è"
+    "google_page": "https://maps.google.com/?q=Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂ+IGC+Ã¥Â¹Â¿Ã¥Â·Â",
+    "gmaps": "https://maps.google.com/?q=Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂ+Ã¥Â¹Â¿Ã¥Â·Â",
+    "apple": "https://maps.apple.com/?q=Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂ+Ã¥Â¹Â¿Ã¥Â·Â",
+    "amap": "https://uri.amap.com/search?keyword=Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂIGC&city=Ã¥Â¹Â¿Ã¥Â·Â",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¨ÂÂ³Ã¦Â­Â£Ã¦Â½Â®Ã¨ÂÂ"
   },
   {
     "id": 8,
@@ -285,9 +285,9 @@
     "addr_en": "1 Changde Rd, Jing'an, Shanghai 200040",
     "addr_zh": "上海市静安区常德路1号",
     "sky": true,
-    "score": 5,
-    "desc_en": "My favorite hotel in Shanghai, full stop. Exceptional service, stunning interiors, perfect Jing'an location.",
-    "desc_zh": "æå¨ä¸æµ·æç±çéåºï¼æ²¡æä¹ä¸ãæå¡ãè®¾è®¡ãä½ç½®å¨é¨æ»¡åã",
+    "score": 4.5,
+    "desc_en": "One of my favorite hotels in Shanghai. It features a modern Chinese design style, top-tier service, and a prime location. Staying here allows for an immersive experience of authentic old Shanghai street culture, all within walking distance.",
+    "desc_zh": "上海最喜欢的酒店之一，新中式设计风格，顶级服务+顶级地段，周围步行可沉浸式体验真正的上海老街文化",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -309,24 +309,24 @@
     "gmaps": "https://maps.google.com/?q=The+PuLi+Hotel+Shanghai",
     "apple": "https://maps.apple.com/?q=The+PuLi+Hotel+Shanghai",
     "amap": "https://uri.amap.com/search?keyword=çä¸½éåº&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/çä¸½éåº"
+    "dianping": "https://www.dianping.com/shop/2716369/"
   },
   {
     "id": 9,
     "city": "shanghai",
     "cat": "eat",
-    "emoji": "ð¥",
+    "emoji": "Ã°ÂÂ¥Â",
     "tall": true,
     "name_en": "Lailai Xiaolong",
-    "name_zh": "è±è±å°ç¬¼",
-    "sub_en": "Shanghai Â· Xiaolongbao",
-    "sub_zh": "ä¸æµ· Â· å°ç¬¼å",
+    "name_zh": "Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼",
+    "sub_en": "Shanghai ÃÂ· Xiaolongbao",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã¥Â°ÂÃ§Â¬Â¼Ã¥ÂÂ",
     "addr_en": "Multiple locations, Shanghai",
-    "addr_zh": "ä¸æµ·å¸è±è±å°ç¬¼ï¼å¤å®¶é¨åºï¼",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼Ã¯Â¼ÂÃ¥Â¤ÂÃ¥Â®Â¶Ã©ÂÂ¨Ã¥ÂºÂÃ¯Â¼Â",
     "sky": true,
     "score": 4.9,
-    "desc_en": "Non-negotiable stop in Shanghai. Thinnest skin, richest broth â perfect every single time.",
-    "desc_zh": "æ¥ä¸æµ·å¿å»ï¼æ²¡æåéä½å°ãç®èæ±¤é²ï¼æ¯æ¬¡é½å®ç¾ã",
+    "desc_en": "Non-negotiable stop in Shanghai. Thinnest skin, richest broth Ã¢ÂÂ perfect every single time.",
+    "desc_zh": "Ã¦ÂÂ¥Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¿ÂÃ¥ÂÂ»Ã¯Â¼ÂÃ¦Â²Â¡Ã¦ÂÂÃ¥ÂÂÃ©ÂÂÃ¤Â½ÂÃ¥ÂÂ°Ã£ÂÂÃ§ÂÂ®Ã¨ÂÂÃ¦Â±Â¤Ã©Â²ÂÃ¯Â¼ÂÃ¦Â¯ÂÃ¦Â¬Â¡Ã©ÂÂ½Ã¥Â®ÂÃ§Â¾ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -337,35 +337,35 @@
       "Thin skin"
     ],
     "tags_zh": [
-      "å¿å»",
-      "å°ç¬¼å",
-      "æ¬å°äººæç±",
-      "äº²æ°ä»·æ ¼",
-      "ç®èæ±¤é²"
+      "Ã¥Â¿ÂÃ¥ÂÂ»",
+      "Ã¥Â°ÂÃ§Â¬Â¼Ã¥ÂÂ",
+      "Ã¦ÂÂ¬Ã¥ÂÂ°Ã¤ÂºÂºÃ¦ÂÂÃ§ÂÂ±",
+      "Ã¤ÂºÂ²Ã¦Â°ÂÃ¤Â»Â·Ã¦Â Â¼",
+      "Ã§ÂÂ®Ã¨ÂÂÃ¦Â±Â¤Ã©Â²Â"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=è±è±å°ç¬¼+ä¸æµ·",
-    "gmaps": "https://maps.google.com/?q=è±è±å°ç¬¼+ä¸æµ·",
-    "apple": "https://maps.apple.com/?q=è±è±å°ç¬¼+ä¸æµ·",
-    "amap": "https://uri.amap.com/search?keyword=è±è±å°ç¬¼&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/è±è±å°ç¬¼"
+    "google_page": "https://maps.google.com/?q=Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "gmaps": "https://maps.google.com/?q=Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "apple": "https://maps.apple.com/?q=Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "amap": "https://uri.amap.com/search?keyword=Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¨ÂÂ±Ã¨ÂÂ±Ã¥Â°ÂÃ§Â¬Â¼"
   },
   {
     "id": 10,
     "city": "shanghai",
     "cat": "drink",
-    "emoji": "ð¥",
+    "emoji": "Ã°ÂÂ¥Â",
     "tall": false,
     "name_en": "Speaklow",
     "name_zh": "Speak Low",
-    "sub_en": "Fuxing Rd Â· World Top 50 bar",
-    "sub_zh": "å¤å´è·¯ Â· å¨ç50æä½³éå§",
+    "sub_en": "Fuxing Rd ÃÂ· World Top 50 bar",
+    "sub_zh": "Ã¥Â¤ÂÃ¥ÂÂ´Ã¨Â·Â¯ ÃÂ· Ã¥ÂÂ¨Ã§ÂÂ50Ã¦ÂÂÃ¤Â½Â³Ã©ÂÂÃ¥ÂÂ§",
     "addr_en": "579 Fuxing Middle Rd, Xuhui, Shanghai",
-    "addr_zh": "ä¸æµ·å¸å¾æ±åºå¤å´ä¸­è·¯579å·",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¥Â¾ÂÃ¦Â±ÂÃ¥ÂÂºÃ¥Â¤ÂÃ¥ÂÂ´Ã¤Â¸Â­Ã¨Â·Â¯579Ã¥ÂÂ·",
     "sky": true,
     "score": 4.8,
     "desc_en": "World Top 50 and every bit deserved. Find the hidden entrance, explore three totally different floors.",
-    "desc_zh": "å¨çå50ï¼å®è³åå½ãæ¾éèå¥å£ï¼ä¸å±åææåï¼æ¯å±é£æ ¼å®å¨ä¸åã",
+    "desc_zh": "Ã¥ÂÂ¨Ã§ÂÂÃ¥ÂÂ50Ã¯Â¼ÂÃ¥Â®ÂÃ¨ÂÂ³Ã¥ÂÂÃ¥Â½ÂÃ£ÂÂÃ¦ÂÂ¾Ã©ÂÂÃ¨ÂÂÃ¥ÂÂ¥Ã¥ÂÂ£Ã¯Â¼ÂÃ¤Â¸ÂÃ¥Â±ÂÃ¥ÂÂÃ¦ÂÂÃ¦ÂÂÃ¥ÂÂÃ¯Â¼ÂÃ¦Â¯ÂÃ¥Â±ÂÃ©Â£ÂÃ¦Â Â¼Ã¥Â®ÂÃ¥ÂÂ¨Ã¤Â¸ÂÃ¥ÂÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -376,35 +376,35 @@
       "Craft cocktails"
     ],
     "tags_zh": [
-      "å¨ç50ä½³",
-      "éèå¥å£",
-      "ä¸å±ç©ºé´",
-      "ä¸å¯éè¿",
-      "ç²¾è°é¸¡å°¾é"
+      "Ã¥ÂÂ¨Ã§ÂÂ50Ã¤Â½Â³",
+      "Ã©ÂÂÃ¨ÂÂÃ¥ÂÂ¥Ã¥ÂÂ£",
+      "Ã¤Â¸ÂÃ¥Â±ÂÃ§Â©ÂºÃ©ÂÂ´",
+      "Ã¤Â¸ÂÃ¥ÂÂ¯Ã©ÂÂÃ¨Â¿Â",
+      "Ã§Â²Â¾Ã¨Â°ÂÃ©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂ"
     ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Speaklow+Shanghai",
-    "gmaps": "https://maps.google.com/?q=Speak+Low+ä¸æµ·",
+    "gmaps": "https://maps.google.com/?q=Speak+Low+Ã¤Â¸ÂÃ¦ÂµÂ·",
     "apple": "https://maps.apple.com/?q=Speaklow+Shanghai",
-    "amap": "https://uri.amap.com/search?keyword=Speak+Low&city=ä¸æµ·",
+    "amap": "https://uri.amap.com/search?keyword=Speak+Low&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
     "dianping": "https://www.dianping.com/search/keyword/2/0/SpeakLow"
   },
   {
     "id": 11,
     "city": "shanghai",
     "cat": "drink",
-    "emoji": "â",
+    "emoji": "Ã¢ÂÂ",
     "tall": true,
     "name_en": "Geecho Brew",
-    "name_zh": "å±±åå ",
-    "sub_en": "Shanghai Â· Specialty coffee",
-    "sub_zh": "ä¸æµ· Â· ç²¾ååå¡",
+    "name_zh": "Ã¥Â±Â±Ã¥ÂÂÃ¥Â Â",
+    "sub_en": "Shanghai ÃÂ· Specialty coffee",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã§Â²Â¾Ã¥ÂÂÃ¥ÂÂÃ¥ÂÂ¡",
     "addr_en": "Geecho Brew, Shanghai",
-    "addr_zh": "ä¸æµ·å¸å±±åå åå¡",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¥Â±Â±Ã¥ÂÂÃ¥Â ÂÃ¥ÂÂÃ¥ÂÂ¡",
     "sky": true,
     "score": 4.7,
-    "desc_en": "A bit far from downtown but worth every minute. My favorite coffee shop in Shanghai â serious craft.",
-    "desc_zh": "ç¨å¾®åè¿ä½ç»å¯¹å¼å¾ä¸ç¨ãå¨æå¿éæ¯ä¸æµ·æå¥½çç²¾ååå¡é¦ã",
+    "desc_en": "A bit far from downtown but worth every minute. My favorite coffee shop in Shanghai Ã¢ÂÂ serious craft.",
+    "desc_zh": "Ã§Â¨ÂÃ¥Â¾Â®Ã¥ÂÂÃ¨Â¿ÂÃ¤Â½ÂÃ§Â»ÂÃ¥Â¯Â¹Ã¥ÂÂ¼Ã¥Â¾ÂÃ¤Â¸ÂÃ§Â¨ÂÃ£ÂÂÃ¥ÂÂ¨Ã¦ÂÂÃ¥Â¿ÂÃ©ÂÂÃ¦ÂÂ¯Ã¤Â¸ÂÃ¦ÂµÂ·Ã¦ÂÂÃ¥Â¥Â½Ã§ÂÂÃ§Â²Â¾Ã¥ÂÂÃ¥ÂÂÃ¥ÂÂ¡Ã©Â¦ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -415,35 +415,35 @@
       "Single origin"
     ],
     "tags_zh": [
-      "å¿å»",
-      "ç²¾ååå¡",
-      "å¼å¾ä¸ç¨",
-      "éèå®è",
-      "ååè±"
+      "Ã¥Â¿ÂÃ¥ÂÂ»",
+      "Ã§Â²Â¾Ã¥ÂÂÃ¥ÂÂÃ¥ÂÂ¡",
+      "Ã¥ÂÂ¼Ã¥Â¾ÂÃ¤Â¸ÂÃ§Â¨Â",
+      "Ã©ÂÂÃ¨ÂÂÃ¥Â®ÂÃ¨ÂÂ",
+      "Ã¥ÂÂÃ¥ÂÂÃ¨Â±Â"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=å±±åå +ä¸æµ·",
+    "google_page": "https://maps.google.com/?q=Ã¥Â±Â±Ã¥ÂÂÃ¥Â Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
     "gmaps": "https://maps.google.com/?q=Geecho+Brew+Shanghai",
-    "apple": "https://maps.apple.com/?q=å±±åå +ä¸æµ·",
-    "amap": "https://uri.amap.com/search?keyword=å±±åå &city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/å±±åå "
+    "apple": "https://maps.apple.com/?q=Ã¥Â±Â±Ã¥ÂÂÃ¥Â Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "amap": "https://uri.amap.com/search?keyword=Ã¥Â±Â±Ã¥ÂÂÃ¥Â Â&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¥Â±Â±Ã¥ÂÂÃ¥Â Â"
   },
   {
     "id": 12,
     "city": "shanghai",
     "cat": "stay",
-    "emoji": "ð°",
+    "emoji": "Ã°ÂÂÂ°",
     "tall": false,
     "name_en": "Waldorf Astoria Shanghai on the Bund",
-    "name_zh": "ä¸æµ·å¤æ»©åå°éå¤«éåº",
-    "sub_en": "Bund Â· Historic luxury",
-    "sub_zh": "å¤æ»© Â· åå²å¥¢å",
+    "name_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂÃ¥Â°ÂÃ©ÂÂÃ¥Â¤Â«Ã©ÂÂÃ¥ÂºÂ",
+    "sub_en": "Bund ÃÂ· Historic luxury",
+    "sub_zh": "Ã¥Â¤ÂÃ¦Â»Â© ÃÂ· Ã¥ÂÂÃ¥ÂÂ²Ã¥Â¥Â¢Ã¥ÂÂ",
     "addr_en": "2 Zhongshan East 1st Rd, Huangpu, Shanghai",
-    "addr_zh": "ä¸æµ·å¸é»æµ¦åºä¸­å±±ä¸ä¸è·¯2å·",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ©Â»ÂÃ¦ÂµÂ¦Ã¥ÂÂºÃ¤Â¸Â­Ã¥Â±Â±Ã¤Â¸ÂÃ¤Â¸ÂÃ¨Â·Â¯2Ã¥ÂÂ·",
     "sky": true,
     "score": 4.7,
     "desc_en": "Iconic Bund location, stunning historic building. The Long Bar is a must even if you're not staying.",
-    "desc_zh": "å¤æ»©æ å¿æ§ä½ç½®ï¼åå²å»ºç­ä»¤äººæå¹ãå³ä½¿ä¸ä½ï¼Long Barä¹å¼å¾ä¸ç¨ä¸å»ã",
+    "desc_zh": "Ã¥Â¤ÂÃ¦Â»Â©Ã¦Â ÂÃ¥Â¿ÂÃ¦ÂÂ§Ã¤Â½ÂÃ§Â½Â®Ã¯Â¼ÂÃ¥ÂÂÃ¥ÂÂ²Ã¥Â»ÂºÃ§Â­ÂÃ¤Â»Â¤Ã¤ÂºÂºÃ¦ÂÂÃ¥ÂÂ¹Ã£ÂÂÃ¥ÂÂ³Ã¤Â½Â¿Ã¤Â¸ÂÃ¤Â½ÂÃ¯Â¼ÂLong BarÃ¤Â¹ÂÃ¥ÂÂ¼Ã¥Â¾ÂÃ¤Â¸ÂÃ§Â¨ÂÃ¤Â¸ÂÃ¥ÂÂ»Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -454,35 +454,35 @@
       "Luxury"
     ],
     "tags_zh": [
-      "å¤æ»©æ¯è§",
-      "åå²å»ºç­",
-      "æ å¿æ§",
+      "Ã¥Â¤ÂÃ¦Â»Â©Ã¦ÂÂ¯Ã¨Â§Â",
+      "Ã¥ÂÂÃ¥ÂÂ²Ã¥Â»ÂºÃ§Â­Â",
+      "Ã¦Â ÂÃ¥Â¿ÂÃ¦ÂÂ§",
       "Long Bar",
-      "å¥¢å"
+      "Ã¥Â¥Â¢Ã¥ÂÂ"
     ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Waldorf+Astoria+Shanghai+Bund",
     "gmaps": "https://maps.google.com/?q=Waldorf+Astoria+Shanghai+Bund",
     "apple": "https://maps.apple.com/?q=Waldorf+Astoria+Shanghai",
-    "amap": "https://uri.amap.com/search?keyword=åå°éå¤«éåº&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/å¤æ»©åå°éå¤«"
+    "amap": "https://uri.amap.com/search?keyword=Ã¥ÂÂÃ¥Â°ÂÃ©ÂÂÃ¥Â¤Â«Ã©ÂÂÃ¥ÂºÂ&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂÃ¥Â°ÂÃ©ÂÂÃ¥Â¤Â«"
   },
   {
     "id": 13,
     "city": "shanghai",
     "cat": "stay",
-    "emoji": "ð¨",
+    "emoji": "Ã°ÂÂÂ¨",
     "tall": false,
     "name_en": "The St. Regis on the Bund",
-    "name_zh": "ä¸æµ·å¤æ»©å£çåæ¯éåº",
-    "sub_en": "Bund Â· Luxury",
-    "sub_zh": "å¤æ»© Â· å¥¢å",
+    "name_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂ£Ã§ÂÂÃ¥ÂÂÃ¦ÂÂ¯Ã©ÂÂÃ¥ÂºÂ",
+    "sub_en": "Bund ÃÂ· Luxury",
+    "sub_zh": "Ã¥Â¤ÂÃ¦Â»Â© ÃÂ· Ã¥Â¥Â¢Ã¥ÂÂ",
     "addr_en": "33 Fucheng Rd, Pudong, Shanghai",
-    "addr_zh": "ä¸æµ·å¸æµ¦ä¸æ°åºå¯åè·¯33å·",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¦ÂµÂ¦Ã¤Â¸ÂÃ¦ÂÂ°Ã¥ÂÂºÃ¥Â¯ÂÃ¥ÂÂÃ¨Â·Â¯33Ã¥ÂÂ·",
     "sky": true,
     "score": 4.6,
-    "desc_en": "Reliable luxury on the Bund. The butler service is exceptional â a safe and elegant choice every time.",
-    "desc_zh": "å¤æ»©å¯é çå¥¢åéæ©ï¼ç®¡å®¶æå¡åºè²ï¼æ¯æ¬¡é½æ¯å®å¨çã",
+    "desc_en": "Reliable luxury on the Bund. The butler service is exceptional Ã¢ÂÂ a safe and elegant choice every time.",
+    "desc_zh": "Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂ¯Ã©ÂÂ Ã§ÂÂÃ¥Â¥Â¢Ã¥ÂÂÃ©ÂÂÃ¦ÂÂ©Ã¯Â¼ÂÃ§Â®Â¡Ã¥Â®Â¶Ã¦ÂÂÃ¥ÂÂ¡Ã¥ÂÂºÃ¨ÂÂ²Ã¯Â¼ÂÃ¦Â¯ÂÃ¦Â¬Â¡Ã©ÂÂ½Ã¦ÂÂ¯Ã¥Â®ÂÃ¥ÂÂ¨Ã§ÂÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -493,35 +493,35 @@
       "Safe choice"
     ],
     "tags_zh": [
-      "å¤æ»©",
-      "ç®¡å®¶æå¡",
-      "å¯é å¥¢å",
-      "ç»å¸",
-      "å®å¨ç"
+      "Ã¥Â¤ÂÃ¦Â»Â©",
+      "Ã§Â®Â¡Ã¥Â®Â¶Ã¦ÂÂÃ¥ÂÂ¡",
+      "Ã¥ÂÂ¯Ã©ÂÂ Ã¥Â¥Â¢Ã¥ÂÂ",
+      "Ã§Â»ÂÃ¥ÂÂ¸",
+      "Ã¥Â®ÂÃ¥ÂÂ¨Ã§ÂÂ"
     ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=St+Regis+Bund+Shanghai",
     "gmaps": "https://maps.google.com/?q=St+Regis+Bund+Shanghai",
     "apple": "https://maps.apple.com/?q=St+Regis+Shanghai+Bund",
-    "amap": "https://uri.amap.com/search?keyword=å¤æ»©å£çåæ¯&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/å¤æ»©å£çåæ¯"
+    "amap": "https://uri.amap.com/search?keyword=Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂ£Ã§ÂÂÃ¥ÂÂÃ¦ÂÂ¯&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¥Â¤ÂÃ¦Â»Â©Ã¥ÂÂ£Ã§ÂÂÃ¥ÂÂÃ¦ÂÂ¯"
   },
   {
     "id": 14,
     "city": "shanghai",
     "cat": "eat",
-    "emoji": "ð«",
+    "emoji": "Ã°ÂÂ«Â",
     "tall": false,
     "name_en": "Renhe Restaurant",
-    "name_zh": "äººåé¦",
-    "sub_en": "Shanghai Â· Shanghainese",
-    "sub_zh": "ä¸æµ· Â· æ¬å¸®è",
+    "name_zh": "Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â",
+    "sub_en": "Shanghai ÃÂ· Shanghainese",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã¦ÂÂ¬Ã¥Â¸Â®Ã¨ÂÂ",
     "addr_en": "Renhe Restaurant, Shanghai",
-    "addr_zh": "ä¸æµ·å¸äººåé¦",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¤ÂºÂºÃ¥ÂÂÃ©Â¦Â",
     "sky": true,
     "score": 4.6,
-    "desc_en": "Excellent Shanghainese home cooking. Unpretentious, deeply satisfying â exactly what you want after a long day.",
-    "desc_zh": "åºè²çæ¬å¸®å®¶å¸¸èï¼ä¸åä½ï¼åå®éå¸¸æ»¡è¶³ï¼æ­£æ¯ä½ éè¦çé£ç§è¸å®ã",
+    "desc_en": "Excellent Shanghainese home cooking. Unpretentious, deeply satisfying Ã¢ÂÂ exactly what you want after a long day.",
+    "desc_zh": "Ã¥ÂÂºÃ¨ÂÂ²Ã§ÂÂÃ¦ÂÂ¬Ã¥Â¸Â®Ã¥Â®Â¶Ã¥Â¸Â¸Ã¨ÂÂÃ¯Â¼ÂÃ¤Â¸ÂÃ¥ÂÂÃ¤Â½ÂÃ¯Â¼ÂÃ¥ÂÂÃ¥Â®ÂÃ©ÂÂÃ¥Â¸Â¸Ã¦Â»Â¡Ã¨Â¶Â³Ã¯Â¼ÂÃ¦Â­Â£Ã¦ÂÂ¯Ã¤Â½Â Ã©ÂÂÃ¨Â¦ÂÃ§ÂÂÃ©ÂÂ£Ã§Â§ÂÃ¨Â¸ÂÃ¥Â®ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -532,35 +532,35 @@
       "Comforting"
     ],
     "tags_zh": [
-      "æ¬å¸®è",
-      "å®¶å¸¸",
-      "ä¸åä½",
-      "æ¬å°äººç±å»",
-      "è¸å®"
+      "Ã¦ÂÂ¬Ã¥Â¸Â®Ã¨ÂÂ",
+      "Ã¥Â®Â¶Ã¥Â¸Â¸",
+      "Ã¤Â¸ÂÃ¥ÂÂÃ¤Â½Â",
+      "Ã¦ÂÂ¬Ã¥ÂÂ°Ã¤ÂºÂºÃ§ÂÂ±Ã¥ÂÂ»",
+      "Ã¨Â¸ÂÃ¥Â®Â"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=äººåé¦+ä¸æµ·",
-    "gmaps": "https://maps.google.com/?q=äººåé¦+ä¸æµ·",
-    "apple": "https://maps.apple.com/?q=äººåé¦+ä¸æµ·",
-    "amap": "https://uri.amap.com/search?keyword=äººåé¦&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/äººåé¦"
+    "google_page": "https://maps.google.com/?q=Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "gmaps": "https://maps.google.com/?q=Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "apple": "https://maps.apple.com/?q=Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "amap": "https://uri.amap.com/search?keyword=Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã¤ÂºÂºÃ¥ÂÂÃ©Â¦Â"
   },
   {
     "id": 15,
     "city": "shanghai",
     "cat": "eat",
-    "emoji": "ð·",
+    "emoji": "Ã°ÂÂÂ·",
     "tall": false,
     "name_en": "Fu 1039",
-    "name_zh": "ç¦1039",
-    "sub_en": "Changning Â· Shanghainese fine dining",
-    "sub_zh": "é¿å® Â· æ¬å¸®ç²¾è´è",
+    "name_zh": "Ã§Â¦Â1039",
+    "sub_en": "Changning ÃÂ· Shanghainese fine dining",
+    "sub_zh": "Ã©ÂÂ¿Ã¥Â®Â ÃÂ· Ã¦ÂÂ¬Ã¥Â¸Â®Ã§Â²Â¾Ã¨ÂÂ´Ã¨ÂÂ",
     "addr_en": "1039 Yuyuan Rd, Changning, Shanghai",
-    "addr_zh": "ä¸æµ·å¸é¿å®åºæå­è·¯1039å·",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ©ÂÂ¿Ã¥Â®ÂÃ¥ÂÂºÃ¦ÂÂÃ¥ÂÂ­Ã¨Â·Â¯1039Ã¥ÂÂ·",
     "sky": true,
     "score": 4.7,
     "desc_en": "Classic Shanghainese in a stunning heritage villa. One of the most beautiful restaurant settings in the city.",
-    "desc_zh": "åå²èå®éçç»å¸æ¬å¸®èï¼æ¯ä¸æµ·æç¾çé¤åç¯å¢ä¹ä¸ï¼å¼å¾ä¸ç¨ã",
+    "desc_zh": "Ã¥ÂÂÃ¥ÂÂ²Ã¨ÂÂÃ¥Â®ÂÃ©ÂÂÃ§ÂÂÃ§Â»ÂÃ¥ÂÂ¸Ã¦ÂÂ¬Ã¥Â¸Â®Ã¨ÂÂÃ¯Â¼ÂÃ¦ÂÂ¯Ã¤Â¸ÂÃ¦ÂµÂ·Ã¦ÂÂÃ§Â¾ÂÃ§ÂÂÃ©Â¤ÂÃ¥ÂÂÃ§ÂÂ¯Ã¥Â¢ÂÃ¤Â¹ÂÃ¤Â¸ÂÃ¯Â¼ÂÃ¥ÂÂ¼Ã¥Â¾ÂÃ¤Â¸ÂÃ§Â¨ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -571,35 +571,35 @@
       "Special occasion"
     ],
     "tags_zh": [
-      "æ¬å¸®è",
-      "åå²èå®",
-      "ç²¾è´",
-      "ç¯å¢ç»ç¾",
-      "ç¹å«åºå"
+      "Ã¦ÂÂ¬Ã¥Â¸Â®Ã¨ÂÂ",
+      "Ã¥ÂÂÃ¥ÂÂ²Ã¨ÂÂÃ¥Â®Â",
+      "Ã§Â²Â¾Ã¨ÂÂ´",
+      "Ã§ÂÂ¯Ã¥Â¢ÂÃ§Â»ÂÃ§Â¾Â",
+      "Ã§ÂÂ¹Ã¥ÂÂ«Ã¥ÂÂºÃ¥ÂÂ"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=ç¦1039+ä¸æµ·",
-    "gmaps": "https://maps.google.com/?q=ç¦1039+ä¸æµ·",
-    "apple": "https://maps.apple.com/?q=ç¦1039+ä¸æµ·",
-    "amap": "https://uri.amap.com/search?keyword=ç¦1039&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/ç¦1039"
+    "google_page": "https://maps.google.com/?q=Ã§Â¦Â1039+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "gmaps": "https://maps.google.com/?q=Ã§Â¦Â1039+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "apple": "https://maps.apple.com/?q=Ã§Â¦Â1039+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "amap": "https://uri.amap.com/search?keyword=Ã§Â¦Â1039&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/Ã§Â¦Â1039"
   },
   {
     "id": 16,
     "city": "shanghai",
     "cat": "drink",
-    "emoji": "ð¹",
+    "emoji": "Ã°ÂÂÂ¹",
     "tall": false,
     "name_en": "The Union Trading Company",
     "name_zh": "Union Trading Company",
-    "sub_en": "Shanghai Â· Asia Top 50 bar",
-    "sub_zh": "ä¸æµ· Â· äºæ´²50æä½³éå§",
+    "sub_en": "Shanghai ÃÂ· Asia Top 50 bar",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã¤ÂºÂÃ¦Â´Â²50Ã¦ÂÂÃ¤Â½Â³Ã©ÂÂÃ¥ÂÂ§",
     "addr_en": "64 W Fuxing Rd, Xuhui, Shanghai",
-    "addr_zh": "ä¸æµ·å¸å¾æ±åºå¤å´è¥¿è·¯64å·",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¥Â¾ÂÃ¦Â±ÂÃ¥ÂÂºÃ¥Â¤ÂÃ¥ÂÂ´Ã¨Â¥Â¿Ã¨Â·Â¯64Ã¥ÂÂ·",
     "sky": true,
     "score": 4.8,
-    "desc_en": "Asia's Top 50 bars â and the vibe fully justifies it. Classic cocktails done perfectly, great crowd.",
-    "desc_zh": "äºæ´²50ä½³ï¼æ°å´å®å¨å¯¹å¾èµ·è¿ä¸ªåå¤´ãç»å¸é¸¡å°¾éåå¾æ æå¯å»ï¼äººç¾¤ä¹å¾å¯¹å³ã",
+    "desc_en": "Asia's Top 50 bars Ã¢ÂÂ and the vibe fully justifies it. Classic cocktails done perfectly, great crowd.",
+    "desc_zh": "Ã¤ÂºÂÃ¦Â´Â²50Ã¤Â½Â³Ã¯Â¼ÂÃ¦Â°ÂÃ¥ÂÂ´Ã¥Â®ÂÃ¥ÂÂ¨Ã¥Â¯Â¹Ã¥Â¾ÂÃ¨ÂµÂ·Ã¨Â¿ÂÃ¤Â¸ÂªÃ¥ÂÂÃ¥Â¤Â´Ã£ÂÂÃ§Â»ÂÃ¥ÂÂ¸Ã©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂÃ¥ÂÂÃ¥Â¾ÂÃ¦ÂÂ Ã¦ÂÂÃ¥ÂÂ¯Ã¥ÂÂ»Ã¯Â¼ÂÃ¤ÂºÂºÃ§Â¾Â¤Ã¤Â¹ÂÃ¥Â¾ÂÃ¥Â¯Â¹Ã¥ÂÂ³Ã£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -610,35 +610,35 @@
       "Unmissable"
     ],
     "tags_zh": [
-      "äºæ´²50ä½³",
-      "ç»å¸é¸¡å°¾é",
-      "æ°å´å¥½",
-      "å¾æ±",
-      "ä¸å¯éè¿"
+      "Ã¤ÂºÂÃ¦Â´Â²50Ã¤Â½Â³",
+      "Ã§Â»ÂÃ¥ÂÂ¸Ã©Â¸Â¡Ã¥Â°Â¾Ã©ÂÂ",
+      "Ã¦Â°ÂÃ¥ÂÂ´Ã¥Â¥Â½",
+      "Ã¥Â¾ÂÃ¦Â±Â",
+      "Ã¤Â¸ÂÃ¥ÂÂ¯Ã©ÂÂÃ¨Â¿Â"
     ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=Union+Trading+Company+Shanghai",
     "gmaps": "https://maps.google.com/?q=Union+Trading+Company+Shanghai",
     "apple": "https://maps.apple.com/?q=Union+Trading+Company+Shanghai",
-    "amap": "https://uri.amap.com/search?keyword=Union+Trading+Company&city=ä¸æµ·",
+    "amap": "https://uri.amap.com/search?keyword=Union+Trading+Company&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
     "dianping": "https://www.dianping.com/search/keyword/2/0/Union+Trading+Company"
   },
   {
     "id": 17,
     "city": "shanghai",
     "cat": "drink",
-    "emoji": "ð",
+    "emoji": "Ã°ÂÂÂ",
     "tall": false,
     "name_en": "INS",
     "name_zh": "INS",
-    "sub_en": "Shanghai Â· Club Â· 11 bars in one building",
-    "sub_zh": "ä¸æµ· Â· å¤åº Â· ä¸æ æ¥¼11ä¸ªå§",
+    "sub_en": "Shanghai ÃÂ· Club ÃÂ· 11 bars in one building",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã¥Â¤ÂÃ¥ÂºÂ ÃÂ· Ã¤Â¸ÂÃ¦Â ÂÃ¦Â¥Â¼11Ã¤Â¸ÂªÃ¥ÂÂ§",
     "addr_en": "INS Club, Shanghai",
-    "addr_zh": "ä¸æµ·å¸INSå¤åº",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂINSÃ¥Â¤ÂÃ¥ÂºÂ",
     "sky": true,
     "score": 4.6,
-    "desc_en": "THE best club experience in Shanghai. One building with 11 bars and a club â something for everyone, every floor is different.",
-    "desc_zh": "ä¸æµ·æå¥½çå¤åºä½éªï¼æ²¡æä¹ä¸ãä¸æ æ¥¼11ä¸ªå§å å¤åºï¼æ¯å±é£æ ¼ä¸åï¼æ»æä½ çé£ä¸å±ã",
+    "desc_en": "THE best club experience in Shanghai. One building with 11 bars and a club Ã¢ÂÂ something for everyone, every floor is different.",
+    "desc_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¦ÂÂÃ¥Â¥Â½Ã§ÂÂÃ¥Â¤ÂÃ¥ÂºÂÃ¤Â½ÂÃ©ÂªÂÃ¯Â¼ÂÃ¦Â²Â¡Ã¦ÂÂÃ¤Â¹ÂÃ¤Â¸ÂÃ£ÂÂÃ¤Â¸ÂÃ¦Â ÂÃ¦Â¥Â¼11Ã¤Â¸ÂªÃ¥ÂÂ§Ã¥ÂÂ Ã¥Â¤ÂÃ¥ÂºÂÃ¯Â¼ÂÃ¦Â¯ÂÃ¥Â±ÂÃ©Â£ÂÃ¦Â Â¼Ã¤Â¸ÂÃ¥ÂÂÃ¯Â¼ÂÃ¦ÂÂ»Ã¦ÂÂÃ¤Â½Â Ã§ÂÂÃ©ÂÂ£Ã¤Â¸ÂÃ¥Â±ÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -649,35 +649,35 @@
       "Unmissable"
     ],
     "tags_zh": [
-      "æä½³å¤åº",
-      "11ä¸ªå§",
-      "æ·±å¤",
-      "æ´¾å¯¹",
-      "ä¸å¯éè¿"
+      "Ã¦ÂÂÃ¤Â½Â³Ã¥Â¤ÂÃ¥ÂºÂ",
+      "11Ã¤Â¸ÂªÃ¥ÂÂ§",
+      "Ã¦Â·Â±Ã¥Â¤Â",
+      "Ã¦Â´Â¾Ã¥Â¯Â¹",
+      "Ã¤Â¸ÂÃ¥ÂÂ¯Ã©ÂÂÃ¨Â¿Â"
     ],
     "yelp": "",
     "google_page": "https://maps.google.com/?q=INS+Club+Shanghai",
     "gmaps": "https://maps.google.com/?q=INS+Club+Shanghai",
     "apple": "https://maps.apple.com/?q=INS+Club+Shanghai",
-    "amap": "https://uri.amap.com/search?keyword=INSå¤åº&city=ä¸æµ·",
-    "dianping": "https://www.dianping.com/search/keyword/2/0/INSå¤åº"
+    "amap": "https://uri.amap.com/search?keyword=INSÃ¥Â¤ÂÃ¥ÂºÂ&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "dianping": "https://www.dianping.com/search/keyword/2/0/INSÃ¥Â¤ÂÃ¥ÂºÂ"
   },
   {
     "id": 18,
     "city": "shanghai",
     "cat": "visit",
-    "emoji": "ð",
+    "emoji": "Ã°ÂÂÂ",
     "tall": false,
     "name_en": "Former Residence of Hotung Robert",
-    "name_zh": "ä½ä¸æ§å±",
-    "sub_en": "Shanghai Â· Hidden historic spot",
-    "sub_zh": "ä¸æµ· Â· éèåå²æ¯ç¹",
+    "name_zh": "Ã¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â",
+    "sub_en": "Shanghai ÃÂ· Hidden historic spot",
+    "sub_zh": "Ã¤Â¸ÂÃ¦ÂµÂ· ÃÂ· Ã©ÂÂÃ¨ÂÂÃ¥ÂÂÃ¥ÂÂ²Ã¦ÂÂ¯Ã§ÂÂ¹",
     "addr_en": "Former Residence of Hotung Robert, Shanghai",
-    "addr_zh": "ä¸æµ·å¸ä½ä¸æ§å±",
+    "addr_zh": "Ã¤Â¸ÂÃ¦ÂµÂ·Ã¥Â¸ÂÃ¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â",
     "sky": true,
     "score": 4.3,
-    "desc_en": "A genuinely hidden gem â most people walk right past it. Peaceful, atmospheric, a little piece of old Shanghai.",
-    "desc_zh": "çæ­£çéèå®èï¼å¤§å¤æ°äººé½ç´æ¥è·¯è¿ãå®éææ°å´ï¼æ¯èä¸æµ·çä¸çååã",
+    "desc_en": "A genuinely hidden gem Ã¢ÂÂ most people walk right past it. Peaceful, atmospheric, a little piece of old Shanghai.",
+    "desc_zh": "Ã§ÂÂÃ¦Â­Â£Ã§ÂÂÃ©ÂÂÃ¨ÂÂÃ¥Â®ÂÃ¨ÂÂÃ¯Â¼ÂÃ¥Â¤Â§Ã¥Â¤ÂÃ¦ÂÂ°Ã¤ÂºÂºÃ©ÂÂ½Ã§ÂÂ´Ã¦ÂÂ¥Ã¨Â·Â¯Ã¨Â¿ÂÃ£ÂÂÃ¥Â®ÂÃ©ÂÂÃ¦ÂÂÃ¦Â°ÂÃ¥ÂÂ´Ã¯Â¼ÂÃ¦ÂÂ¯Ã¨ÂÂÃ¤Â¸ÂÃ¦ÂµÂ·Ã§ÂÂÃ¤Â¸ÂÃ§ÂÂÃ¥ÂÂÃ¥ÂÂÃ£ÂÂ",
     "desc_en_edited": false,
     "desc_zh_edited": false,
     "tags_en": [
@@ -688,17 +688,17 @@
       "Old Shanghai"
     ],
     "tags_zh": [
-      "éèå®è",
-      "åå²",
-      "å®é",
-      "å°ä¼",
-      "èä¸æµ·"
+      "Ã©ÂÂÃ¨ÂÂÃ¥Â®ÂÃ¨ÂÂ",
+      "Ã¥ÂÂÃ¥ÂÂ²",
+      "Ã¥Â®ÂÃ©ÂÂ",
+      "Ã¥Â°ÂÃ¤Â¼Â",
+      "Ã¨ÂÂÃ¤Â¸ÂÃ¦ÂµÂ·"
     ],
     "yelp": "",
-    "google_page": "https://maps.google.com/?q=ä½ä¸æ§å±+ä¸æµ·",
-    "gmaps": "https://maps.google.com/?q=ä½ä¸æ§å±+ä¸æµ·",
-    "apple": "https://maps.apple.com/?q=ä½ä¸æ§å±+ä¸æµ·",
-    "amap": "https://uri.amap.com/search?keyword=ä½ä¸æ§å±&city=ä¸æµ·",
+    "google_page": "https://maps.google.com/?q=Ã¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "gmaps": "https://maps.google.com/?q=Ã¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "apple": "https://maps.apple.com/?q=Ã¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â+Ã¤Â¸ÂÃ¦ÂµÂ·",
+    "amap": "https://uri.amap.com/search?keyword=Ã¤Â½ÂÃ¤Â¸ÂÃ¦ÂÂ§Ã¥Â±Â&city=Ã¤Â¸ÂÃ¦ÂµÂ·",
     "dianping": ""
   }
 ]
