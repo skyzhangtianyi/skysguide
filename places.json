@@ -746,5 +746,37 @@
     "apple": "",
     "amap": "",
     "dianping": ""
+  },
+  {
+    "id": 1776222323554,
+    "city": "shanghai",
+    "cat": "eat",
+    "emoji": "🍜",
+    "image_url": "https://res.cloudinary.com/dgh1jmwtb/image/upload/v1776222250/dbk9gqgyf4yyhfvcrmm8.jpg",
+    "tall": false,
+    "name_en": "XingXing Shanghainese Restaurant",
+    "name_zh": "兴兴·海派本帮菜",
+    "sub_en": "",
+    "sub_zh": "",
+    "addr_en": "Can't find address in English",
+    "addr_zh": "上海市浦东新区齐河路258号上海漫乐城F3",
+    "sky": true,
+    "score": 4.5,
+    "desc_en": "A local favorite for authentic Shanghainese cuisine. The dinner atmosphere is buzzing with down-to-earth energy, and I highly recommend the eel duo platter.",
+    "desc_zh": "上海本地人爱去的本帮菜，晚餐去到烟火气十足，推荐鳝丝双拼，无敌！",
+    "desc_en_edited": false,
+    "desc_zh_edited": false,
+    "tags_en": [
+      "Local Shanghainese"
+    ],
+    "tags_zh": [
+      "Local Shanghainese"
+    ],
+    "yelp": "",
+    "google_page": "",
+    "gmaps": "",
+    "apple": "",
+    "amap": "https://surl.amap.com/5Era1ym1rbWf",
+    "dianping": "https://m.dianping.com/shop/104545162"
   }
 ]
