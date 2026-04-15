@@ -946,5 +946,33 @@
     "apple": "",
     "amap": "",
     "dianping": ""
+  },
+  {
+    "id": 1776223242540,
+    "city": "bayarea",
+    "cat": "eat",
+    "emoji": "🍜",
+    "image_url": "",
+    "tall": false,
+    "name_en": "Little Shanghai Restaurant",
+    "name_zh": "上海人家",
+    "sub_en": "",
+    "sub_zh": "",
+    "addr_en": "",
+    "addr_zh": "",
+    "sky": false,
+    "score": 4.5,
+    "desc_en": "",
+    "desc_zh": "",
+    "desc_en_edited": false,
+    "desc_zh_edited": false,
+    "tags_en": [],
+    "tags_zh": [],
+    "yelp": "",
+    "google_page": "",
+    "gmaps": "",
+    "apple": "",
+    "amap": "",
+    "dianping": ""
   }
 ]
