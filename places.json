@@ -778,5 +778,33 @@
     "apple": "",
     "amap": "https://surl.amap.com/5Era1ym1rbWf",
     "dianping": "https://m.dianping.com/shop/104545162"
+  },
+  {
+    "id": 1776223028823,
+    "city": "shanghai",
+    "cat": "eat",
+    "emoji": "🍜",
+    "image_url": "",
+    "tall": false,
+    "name_en": "Lao Xing Xian",
+    "name_zh": "老兴鲜",
+    "sub_en": "",
+    "sub_zh": "",
+    "addr_en": "",
+    "addr_zh": "",
+    "sky": false,
+    "score": 4.5,
+    "desc_en": "",
+    "desc_zh": "",
+    "desc_en_edited": false,
+    "desc_zh_edited": false,
+    "tags_en": [],
+    "tags_zh": [],
+    "yelp": "",
+    "google_page": "",
+    "gmaps": "",
+    "apple": "",
+    "amap": "",
+    "dianping": ""
   }
 ]
